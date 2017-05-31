@@ -26,7 +26,7 @@ APP_ID = os.environ.get('APP_ID') if os.environ.get('APP_ID') else "cloud-log-se
 APP_TOKEN = os.environ.get('APP_TOKEN') if os.environ.get('APP_TOKEN') else\
     "88acccdb-a49a-4385-aeb5-0191280ec6dc"
 BK_PAAS_HOST = os.environ.get('BK_PAAS_HOST')\
-    if os.environ.get('BK_PAAS_HOST') else "http://paas.bkopen.com/"
+    if os.environ.get('BK_PAAS_HOST') else "http://paas.bking.com/"
 
 # 兼容环境，app自己添加的，非原setting
 if BK_PAAS_HOST[:-1] != '/':
