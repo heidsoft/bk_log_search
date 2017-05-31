@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%block name='head'>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>日志检索|蓝鲸智云社区版</title>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+        <link rel="shortcut icon" href="${STATIC_URL}favicon.ico" type="image/x-icon">
+        <!-- bootstrap css -->
+		    <link href="${STATIC_URL}assets/bootstrap-3.3.4/css/bootstrap.min.css" rel="stylesheet">
+		    <!-- 禁止bootstrap 响应式 （app根据自身需求启用或禁止bootstrap响应式） -->
+		    <link href="${STATIC_URL}assets/bootstrap-3.3.4/css/bootstrap_noresponsive.css" rel="stylesheet">
+        <link href="${STATIC_URL}css/sumoselect.css" rel="stylesheet" />
+        <link href="${STATIC_URL}css/toastr.min.css" rel="stylesheet">
+        <link href="${STATIC_URL}css/font-awesome.min.css" rel="stylesheet">
+        <link href="${STATIC_URL}css/dataTables.bootstrap.css" rel="stylesheet">
+        <link href="${STATIC_URL}css/minimal/grey.css" rel="stylesheet" />
+        <link href="${STATIC_URL}css/ui-dialog.css" rel="stylesheet" />
+		    <!--自定义css-->
+		    <link href="${STATIC_URL}css/bk.css?v=${STATIC_VERSION}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="${STATIC_URL}css/index.css?v=${STATIC_VERSION}">
+        <link rel="stylesheet" type="text/css" href="${STATIC_URL}css/log_search.css?v=${STATIC_VERSION}">
+        <!-- 这个是全局配置，如果需要在js中使用app_id和site_url,则这个javascript片段一定要保留 -->
+        <script type="text/javascript">
+	    	  var app_id = "${APP_ID}";
+			    var site_url = "${SITE_URL}";	  // app的url前缀,在ajax调用的时候，应该加上该前缀
+			    var static_url = "${STATIC_URL}"; // 静态资源前缀
+	    </script>
+         <style>
+            /*如果你需要给你的应用固定高度和宽度，请在这里修改*/
+            body {
+                width: 1110px;
+                width: auto;
+                font: 16px/1.5 Tahoma,Helvetica,Arial,'微软雅黑',sans-serif;
+            }
+
+        </style>
+    </%block>
+  </head>
+
+  <body style="position:relative;height:auto;min-height:100%;padding-bottom:200px">
+    <!--顶部导航 Start-->
+    <nav class="navbar navbar-default king-horizontal-nav2 navbar-mt0" role="navigation" id="vue_nav" v-cloak>
+        <div class="container" style="min-width: 100%;">
+            <div class="navbar-header col-md-4 col-sm-4 col-xs-4 logo">
+                <a class="navbar-brand" v-on:click="href('')" style="font-size:22px;color:#fff;cursor:pointer">
+                    日志检索
+                </a>
+            </div>
+            <div class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <%
+                    home = dev_guide = contactus = ''
+                    relative_path = APP_PATH
+                    if relative_path == SITE_URL or relative_path.startswith(SITE_URL + "?"):
+                      home = 'king-navbar-active'
+                    elif relative_path.startswith(SITE_URL + "dev-guide/"):
+                      dev_guide = 'king-navbar-active'
+                    elif relative_path.startswith(SITE_URL + "contactus/"):
+                      contactus = 'king-navbar-active'
+                  %>
+                  <li class=""><a v-on:click="href('host/')"><span style="color:#fff;cursor:pointer">主机管理</span></a></li>
+                  <li class=""><a v-on:click="href('config/')"><span style="color:#fff;cursor:pointer">配置管理</span></a></li>
+                  <li style="padding-left:15px;padding-right:15px;margin-top:8px">
+                    <select name="app"  id="app"  class="oc_common oc_userchooser k-input" hideicon="true" v-model="selected">
+                      <option v-for="app in app_list" v-bind:value=app.app_id>{{app["app_name"]}}</option>
+                    </select>
+                  </li>
+                  <a class="avatar">
+                    <span style="color:#fff" class="glyphicon glyphicon-user"></span><span style="color:#fff;margin-left:2px">${request.user.username}</span>
+                  </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--顶部导航 End-->
+    <!-- 固定宽度居中 start -->
+          <div >
+          <%block name='content'></%block>
+          </div>
+    <!-- 固定宽度表单居中 end -->
+    <!-- 尾部声明 start -->
+     <footer class="foot" style="border-top:0px;position: absolute;width: 100%;bottom: 0;background: #999;color: #fff;padding:24px 0">
+        <div class="footer-inner" style="font-size: 12px;" align="center">
+        <p>
+                <a href="###" id="contact_us" class="link" style="color: #fff;">QQ咨询</a>
+                <script src="//wp.qiye.qq.com/loader/4.0.0.js" charset="utf-8"></script>
+                <script type="text/javascript">
+                   try{
+                      __WPA.create({
+                          nameAccount:"800802001",
+                          customEle: document.getElementById('contact_us')
+                      })
+                   }catch(err){}
+                </script>
+                | <a href="http://bbs.bk.tencent.com/forum.php" target="_blank" hotrep="hp.footer.feedback" class="link" style="color: #fff;">蓝鲸论坛</a>
+                | <a href="http://bk.tencent.com/" target="_blank" hotrep="hp.footer.feedback" class="link" style="color: #fff;">蓝鲸官网</a>
+                | <a id="go_platform" target="_blank" hotrep="hp.footer.feedback" class="link" style="color:#fff;cursor:pointer">蓝鲸智云工作台</a>
+            </p>
+            <p>Copyright © 2012-2017 Tencent BlueKing. All Rights Reserved.</p>
+            <p>蓝鲸智云 版权所有</p>
+        </div>
+    </footer>
+      <!-- 尾部声明 start -->
+    <!-- jquery js  -->
+    <script src="${STATIC_URL}js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="${STATIC_URL}js/jquery.json-2.3.min.js" type="text/javascript"></script>
+    <!-- vue js -->
+    <script src="${STATIC_URL}js/vue.js" type="text/javascript"></script>
+    <!-- bootstrap js  -->
+    <script src="${STATIC_URL}assets/bootstrap-3.3.4/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- toastr js  -->
+    <script src="${STATIC_URL}js/toastr.min.js"></script>
+    <!-- sumoselect js  -->
+    <script src="${STATIC_URL}js/jquery.sumoselect.min.js"></script>
+    <!-- datatable js -->
+    <script src="${STATIC_URL}js/jquery.dataTables.min.js"></script>
+    <script src="${STATIC_URL}js/dataTables.bootstrap.min.js"></script>
+    <!-- icheck js -->
+    <script src="${STATIC_URL}js/icheck.min.js"></script>
+    <!-- dialog js -->
+    <script src="${STATIC_URL}js/dialog-min.js"></script>
+    <!--配置js  勿删-->
+    <script src="${STATIC_URL}js/settings.js?v=${STATIC_VERSION}" type="text/javascript"></script>
+    <script src="${STATIC_URL}js/base.js?v=${STATIC_VERSION}"></script>
+
+    ${self.body()}
+    <!-- 兼容性设置 -->
+    <!--[if lt IE 6]>\xe8\x93\x9d\xe9\xb2\xb8\xe6\x99\xba\xe8\x90\xa5\x20\xe7\x89\x88\xe6\x9d\x83\xe6\x89\x80\xe6\x9c\x89<![endif]-->
+  </body>
+</html>

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*===================================================* * 表单
+\*===================================================*/
+.king-table7-demo3 .king-input-group {
+  width: 260px; }
+
+.king-table7-demo3 .king-btn-new {
+  background: #5c90d2;
+  border-color: #3675c5;
+  color: #fff; }
+
+.king-table7-demo3 .king-form-control-feedback {
+  width: 30px;
+  height: 30px;
+  left: 0;
+  line-height: 30px;
+  color: #999; }
+
+.king-table7-demo3 .table .king-btn {
+  width: 70px;
+  height: 24px;
+  padding: 0;
+  min-width: 70px; }

@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/*===================================================*\ 
+ * 异常页面的样式
+\*===================================================*/
+.king-errorpage-middle {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -185px;
+  margin-left: -268px; }
+  .king-errorpage-middle .king-exception-box img {
+    vertical-align: middle;
+    display: inherit;
+    margin: 0 auto; }
+  .king-errorpage-middle .king-exception-box h1 {
+    font-weight: normal;
+    line-height: 1.1;
+    font-size: 28px;
+    margin: 26px 0;
+    color: #2b2c2d; }
+  .king-errorpage-middle .king-exception-box p {
+    font-size: 16px;
+    color: #505152; }
+  .king-errorpage-middle .king-exception-box .king-403-btn1, .king-errorpage-middle .king-exception-box .king-403-btn2 {
+    font-size: 14px; }
+  .king-errorpage-middle .king-exception-box .king-403-btn2 {
+    background: #5CB85C; }
+  .king-errorpage-middle .king-exception-box .king-login-back {
+    font-size: 12px; }
+    .king-errorpage-middle .king-exception-box .king-login-back span {
+      color: #5d9cec; }
+    .king-errorpage-middle .king-exception-box .king-login-back a {
+      padding: 3px 10px;
+      font-size: 14px; }
+
+.king-500-page, .king-401-page, .king-login-page, .king-403-page {
+  width: 536px;
+  text-align: center;
+  margin: auto;
+  font-family: STHeiti, "微软雅黑", Arial; }
+
+.king-login-fail {
+  width: 536px;
+  height: 300px;
+  text-align: center;
+  margin: auto; }
+  .king-login-fail .login-tip {
+    margin-top: 20px;
+    font-size: 14px; }
+    .king-login-fail .login-tip a {
+      font-size: 14px;
+      margin-left: 10px; }
+
+.king-500-page1 {
+  font-family: STHeiti, "微软雅黑", Arial;
+  color: #616161; }
+  .king-500-page1 .error-number {
+    font-size: 100px; }
+  .king-500-page1 .error-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 15px 0; }
+  .king-500-page1 .error-tip {
+    font-size: 12px; }
+    .king-500-page1 .error-tip a {
+      color: #616161;
+      display: inline;
+      background: none;
+      padding: 0;
+      margin: 0;
+      font-size: 12px; }

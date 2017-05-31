@@ -1,0 +1,145 @@
+@charset "utf-8";
+@import "../base/conf";
+
+.king-nav-tabs1{
+    >li {
+        margin-bottom:-2px;
+        >a{
+            border: 1px solid #ddd;
+            border-left: none !important;
+            margin-right:0;
+            background:#FBFAF8;
+            color:#645F63
+        }
+        &:first-child{
+        	>a{
+	            border-left: 1px solid #ddd !important;
+	        }
+        }
+        &.active{
+            >a{
+                background:#FFF;
+                &:hover{
+                    border-bottom-color: #fff !important;
+                }
+            }
+            
+        }
+    } 
+    &.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+	    border-color: #ddd;
+	}
+	&.nav-tabs>li>a:hover{
+        border-color: #ddd;
+	}
+}
+@mixin tabs1-color($color){
+	&.king-nav-tabs1{
+		>li{
+			&.active{
+	            >a{
+	                border-top: 2px solid $color !important;
+	            }
+	        }
+		}
+	}
+}
+.king-tab-success{
+    @include tabs1-color($successBgColor);
+}
+.king-tab-info{
+    @include tabs1-color($infoBgColor);
+}
+.king-tab-primary{
+    @include tabs1-color($primaryBgColor);
+}
+.king-tab-warning{
+    @include tabs1-color($warningBgColor);
+}
+.king-tab-danger{
+    @include tabs1-color($dangerBgColor);
+}
+
+.king-nav-tabs2{
+	border: 1px solid #ddd;
+	background: #FBFAF8;
+    >li {
+        margin-bottom:-2px;
+        >a{
+            border: none;
+            margin-right:0;
+            background:#FBFAF8;
+            color:#645F63;
+            &:focus{
+                background: #FBFAF8;
+            }
+        }
+
+        &.active{
+            >a{
+                border-top: 2px solid #fff !important;
+                background: #fff;
+            }
+            &:first-child{
+            	a{
+            		border-left: none;
+            	}
+            }
+        }
+    } 
+}
+
+@mixin tabs2-color($color){
+	&.king-nav-tabs2{
+		>li{
+			&.active{
+	            >a{
+	            	margin-top: -1px;
+	                border-top: 2px solid $color !important;
+	            }
+	        }
+		}
+	}
+}
+.king-tab-success{
+    @include tabs2-color($successBgColor);
+}
+.king-tab-info{
+    @include tabs2-color($infoBgColor);
+}
+.king-tab-primary{
+    @include tabs2-color($primaryBgColor);
+}
+.king-tab-warning{
+    @include tabs2-color($warningBgColor);
+}
+.king-tab-danger{
+    @include tabs2-color($dangerBgColor);
+}
+
+/*===================================================*\ 
+ * 向前兼容而保留，不要删除
+\*===================================================*/
+.king-nav-tabs{
+    >li {
+        margin-bottom:-2px;
+        >a{
+            border-color:#ddd;
+            margin-right:0;
+            background:#FBFAF8;
+            color:#645F63
+        }
+        &.active{
+            >a{
+                border-top-color:#4A9BFF !important;
+                background:#FFF;
+                border-top-width:2px !important;
+                &:focus{
+                    border-top-color:#4A9BFF !important;
+                    background:#FFF;
+                    border-top-width:2px !important;
+                }
+            }
+        }
+    } 
+} 

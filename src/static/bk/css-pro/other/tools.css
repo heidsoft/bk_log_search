@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/*===================================================*\ 
+ * 水平分隔线
+\*===================================================*/
+.bk-horizontal-line {
+  position: relative;
+  height: 10px; }
+  .bk-horizontal-line:before {
+    content: ' ';
+    width: 100%;
+    border-bottom: 1px dashed #ddd;
+    position: absolute;
+    height: 1px;
+    top: 50%; }

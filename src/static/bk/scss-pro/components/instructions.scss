@@ -1,0 +1,51 @@
+@charset 'utf-8';
+@import '../base/conf';
+/*===================================================*\
+ * instructions
+\*===================================================*/
+.king-instruction{
+    font-size: 12px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 10px 20px;
+    cursor: default;
+    & span{ 
+        color: red;
+     }
+    & h5{ 
+        font-weight: 700; 
+        font-size: 12px; 
+        margin: 0px;
+        line-height: 20px; 
+    }
+    & p{ 
+        margin: 0; 
+        padding: 0; 
+        line-height: 20px; 
+    }
+    &.king-instruction-info{
+        color: darken($infoBgColor, 10%);
+        border: lighten($infoBgColor, 20%) 1px solid;
+        background: lighten($infoBgColor, 30%);       
+    }
+    &.king-instruction-primary{
+        color: darken($primaryBgColor, 10%);
+        border: lighten($primaryBgColor, 20%) 1px solid;
+        background-color: lighten($primaryBgColor, 30%);
+    }
+    &.king-instruction-warning{
+        color: darken($warningBgColor, 10%);
+        border: lighten($warningBgColor, 20%) 1px solid;
+        background-color: lighten($warningBgColor, 30%);
+    }
+    &.king-instruction-danger{
+        color: darken($dangerBgColor, 10%);
+        border: lighten($dangerBgColor, 20%) 1px solid;
+        background-color: lighten($dangerBgColor, 30%);
+    }
+    &.king-instruction-success{
+        color: darken($successBgColor, 10%);
+        border: lighten($successBgColor, 30%) 1px solid;
+        background-color: lighten($successBgColor, 45%);
+    }
+}

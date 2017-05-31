@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+//default
+$defaultBgColor: #f4f4f4;
+$defaultBorderColor: #ddd;
+$defaultHoverColor: darken($defaultBgColor, 10%);
+$defaultFontColor: #555;
+
+//gray
+$grayBgColor: #555;
+$grayBorderColor: #444;
+$grayHoverColor: darken($grayBgColor, 10%);
+$grayFontColor: #555;
+
+//info
+$infoBgColor: #4A9BFF;
+$infoBorderColor: #2180F5;
+$infoHoverColor: darken($infoBgColor, 10%);
+$infoFontColor: #fff;
+$infoDimColor: #B6D7FF;
+$infoLeftColor: #4691EF;
+
+//primary
+$primaryBgColor: #5c90d2;
+$primaryBorderColor: #3675c5;
+$primaryHoverColor: darken($primaryBgColor, 10%);
+$primaryFontColor: #fff;
+$primaryDimColor: #BED2ED;
+
+//warning
+$warningBgColor: #f3b760;
+$warningBorderColor: #efa231;
+$warningHoverColor: darken($warningBgColor, 10%);
+$warningFontColor: #fff;
+$warningDimColor: #F9DAAC;
+
+//danger
+$dangerBgColor: #d26a5c;
+$dangerBorderColor: #c54736;
+$dangerHoverColor: darken($dangerBgColor, 10%);
+$dangerFontColor: #fff;
+$dangerDimColor: #E8B5AE;
+$dangerLeftColor: #ba4738;
+$dangerRightColor: #c94d3c;
+
+//success
+$successBgColor: #46c37b;
+$successBorderColor: #34a263;
+$successHoverColor: darken($successBgColor, 10%);
+$successFontColor: #fff;
+$successDimColor: #ADDAC0;
+$successDeepColor: #3EA542;
+$successBgColor: #44B549;
+
+//muted
+$mutedBgColor: #999;
+$mutedBorderColor: #666;
+$mutedHoverColor: darken($mutedBgColor, 10%);
+$mutedFontColor: #fff;
+
+//dark
+$darkBgColor: #333;
+$darkBorderColor: #000;
+$darkHoverColor: darken($darkBgColor, 10%);
+$darkFontColor: #fff;
+
+//font-family
+$globalFontFamily:STHeiti, '微软雅黑',Arial;
+
+//violet
+$violetLeftColor: #5c5c8a;
+$violetRightColor: #666699;

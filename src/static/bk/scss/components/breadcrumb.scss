@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.king-page-topbar{
+    border-bottom: 1px solid #ddd;
+    background: #fff;
+
+    .h1, .h2, .h3, h1, h2, h3{
+        margin-top: 0;
+    }
+    .breadcrumb{
+        margin-bottom: 0;
+        background: transparent;
+        & > li + li:before{
+            content: '> '!important;
+        }
+    }
+}

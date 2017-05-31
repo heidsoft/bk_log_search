@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+//default
+$defaultBgColor: #fff;
+$defaultBorderColor: #d6d6d6;
+$defaultHoverColor: #fafafa;
+$defaultFontColor: #666666;
+
+//gray
+$grayBgColor: #555;
+$grayBorderColor: #444;
+$grayHoverColor: darken($grayBgColor, 10%);
+$grayFontColor: #555;
+
+//info
+$infoBgColor: #88c3ff;
+$infoBorderColor: #88c3ff;
+$infoHoverColor: darken($infoBgColor, 10%);
+$infoFontColor: #fff;
+$infoDimColor: #B6D7FF;
+$infoLeftColor: #4691EF;
+
+//primary
+$primaryBgColor: #57a3f1;
+$primaryBorderColor: #57a3f1;
+$primaryHoverColor: #4491e1;
+$primaryFontColor: #fff;
+$primaryDimColor: #BED2ED;
+
+//blue
+$blueBgColor: #4491e1;
+$blueBorderColor: #4491e1;
+$blueHoverColor: darken($blueBgColor, 10%);
+$blueFontColor: #fff;
+$blueDimColor: #BED2ED;
+
+//light
+$lightBgColor: #e4edf7;
+$lightBorderColor: #e4edf7;
+$lightHoverColor: darken($lightBgColor, 10%);
+$lightFontColor: #fff;
+$lightDimColor: #BED2ED;
+
+//warning
+$warningBgColor: #ffc349;
+$warningBorderColor: #ffc349;
+$warningHoverColor: #ffb726;
+$warningFontColor: #fff;
+$warningDimColor: #F9DAAC;
+
+//danger
+$dangerBgColor: #ff7979;
+$dangerBorderColor: #ff7979;
+$dangerHoverColor: #fd6154;
+$dangerFontColor: #fff;
+$dangerDimColor: #E8B5AE;
+$dangerLeftColor: #ba4738;
+$dangerRightColor: #c94d3c;
+
+//success
+$successBgColor: #5bd18b;
+$successBorderColor: #5bd18b;
+$successHoverColor: #33c16f;
+$successFontColor: #fff;
+$successDimColor: #ADDAC0;
+$successDeepColor: #3EA542;
+
+//muted
+$mutedBgColor: #999;
+$mutedBorderColor: #666;
+$mutedHoverColor: darken($mutedBgColor, 10%);
+$mutedFontColor: #fff;
+
+//dark
+$darkBgColor: #333;
+$darkBorderColor: #000;
+$darkHoverColor: darken($darkBgColor, 10%);
+$darkFontColor: #fff;
+
+//font-family
+$globalFontFamily:STHeiti, '微软雅黑',Arial;
+
+//violet
+$violetLeftColor: #5c5c8a;
+$violetRightColor: #666699;
+
+// color
+$bg-c: #ccc;
+$bg-3: #333;
+$bg-6: #666;
+$bg-9: #999;
+$bg-e6: #e6e6e6;
+$bg-f: #fff;
+$bg-f5: #f5f5f5;
+$bg-b2beca: #b2beca;

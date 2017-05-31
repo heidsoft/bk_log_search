@@ -1,0 +1,239 @@
+@charset "utf-8";
+@import "conf";
+
+/*===================================================*\
+ * 字体大小
+\*===================================================*/
+@for $i from 10 through 40{
+	.f#{$i}{font-size:#{$i}px!important;}
+}
+
+/*===================================================*\
+ * 宽度值
+\*===================================================*/
+.w{width:100%!important;}
+@for $i from 10 to 100{
+	@if ($i % 10 == 0){
+		.w#{$i}{width:#{$i}px!important;}
+	}
+}
+@for $i from 100 through 800{
+	@if ($i % 100 == 0){
+		.w#{$i}{width:#{$i}px!important;}
+	}
+}
+
+/*===================================================*\
+ * margin 和 padding什
+\*===================================================*/
+@mixin initBox($selector,$opt){
+	@for $i from 0 through 50{
+		@if ($i % 5 == 0){
+			#{$selector}#{$i}{
+				#{$opt}:#{$i}px!important;
+			}
+		}
+	}
+}
+
+@include initBox('.m','margin');
+@include initBox('.mt','margin-top');
+@include initBox('.mb','margin-bottom');
+@include initBox('.ml','margin-left');
+@include initBox('.mr','margin-right');
+
+@include initBox('.p','padding');
+@include initBox('.pt','padding-top');
+@include initBox('.pb','padding-bottom');
+@include initBox('.pl','padding-left');
+@include initBox('.pr','padding-right');
+
+/*===================================================*\
+ * 基础色值
+\*===================================================*/
+$kingBgColor: (
+	'default' : $defaultBgColor,
+	'gray' : $grayBgColor,
+	'info': $infoBgColor,
+	'primary': $primaryBgColor,
+	'danger': $dangerBgColor,
+	'warning': $warningBgColor,
+	'success': $successBgColor,
+	'muted': $mutedBgColor,
+	'dark': $darkBgColor,
+);
+
+@each $selector, $color in $kingBgColor{
+	.king-#{$selector}{
+		background-color: #{$color};
+	}
+	.king-bg-#{$selector}{
+		background-color: #{$color};
+	}
+	a.king-#{$selector}:hover{
+		background-color: darken($color, 10%);
+	}
+	.bg-#{$selector}{
+		background-color: #{$color};
+	}
+	.color-#{$selector}{
+		color: #{$color};
+	}
+	.text-#{$selector}{
+		color: #{$color};
+		&:hover{
+			color: #{$color} !important;
+		}
+	}
+}
+
+
+/*===================================================*\
+ * 辅助样式
+\*===================================================*/
+.color-info-alt{color:#669}
+.color-reverse{color:#fff}
+.color-gray-darker{color:#222}
+.color-gray-dark{color:#333}
+.color-gray-light{color:#777}
+.color-gray-lighter{color:#eee}
+
+.king-bg-gray{background-color:#f4f4f4!important}
+.king-bg-blue{background-color:#4A9BFF!important}
+.king-bg-darkblue{background-color:#5c90d2!important}
+.king-bg-green{background-color:#46c37b!important}
+.king-bg-yellow{background-color:#f3b760!important}
+.king-bg-red{background-color:#d26a5c!important}
+.king-bg-aqua{background-color:#00c0ef!important}
+
+.king-primary-op{background-color:rgba(92,144,210,0.75)}
+a.king-primary-op:hover{background-color:rgba(54,117,197,0.75)}
+.king-primary-dark{background-color:#3e4a59}
+a.king-primary-dark:hover{background-color:#29313b}
+.king-primary-dark-op{background-color:rgba(62,74,89,0.83)}
+a.king-primary-dark-op:hover{background-color:rgba(41,49,59,0.83)}
+.king-primary-darker{background-color:#2c343f}
+a.king-primary-darker:hover{background-color:#171b21}
+.king-primary-light{background-color:#98b9e3}
+a.king-primary-light:hover{background-color:#709ed8}
+.king-primary-lighter{background-color:#ccdcf1}
+a.king-primary-lighter:hover{background-color:#a4c1e6}
+.king-success-light{background-color:#e0f5e9}
+a.king-success-light:hover{background-color:#b9e9ce}
+.king-warning-light{background-color:#fdf3e5}
+a.king-warning-light:hover{background-color:#f9ddb6}
+.king-info-light{background-color:#edf6fd}
+a.king-info-light:hover{background-color:#bfdff8}
+.king-danger-light{background-color:#f9eae8}
+a.king-danger-light:hover{background-color:#eec5c0}
+.king-white{background-color:#fff}
+a.king-white:hover{background-color:#e6e6e6}
+.king-white-op{background-color:rgba(255,255,255,0.075)}
+.king-black{background-color:#000}
+a.king-black:hover{background-color:#000}
+.king-black-op{background-color:rgba(0,0,0,0.4)}
+.king-gray-dark{background-color:#999}
+a.king-gray-dark:hover{background-color:#808080}
+.king-gray-darker{background-color:#393939}
+a.king-gray-darker:hover{background-color:#202020}
+.king-gray-light{background-color:#f3f3f3}
+a.king-gray-light:hover{background-color:#dadada}
+.king-gray-lighter{background-color:#f9f9f9}
+a.king-gray-lighter:hover{background-color:#e0e0e0}
+
+.fb{font-weight:bold!important;}
+.fn{font-weight:normal!important;}
+.lh150{line-height:150%!important;}
+.lh180{line-height:180%!important;}
+.lh200{line-height:200%!important;}
+.unl{text-decoration:underline!important;}
+.no_unl{text-decoration:none!important;}
+.tl{text-align:left!important;}
+.tc{text-align:center!important;}
+.tr{text-align:right!important;}
+.bc{margin-left:auto!important;margin-right:auto!important;}
+.fl{float:left!important;}
+.fr{float:right!important;}
+.cb{clear:both!important;}
+.cl{clear:left!important;}
+.cr{clear:right!important;}
+.clearfix:after{content:'.';display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-block;}
+.clearfix{display:block;zoom:1;}
+.vm{vertical-align:middle!important;}
+.pr{position:relative!important;}
+.pa{position:absolute!important;}
+.abs-right{position:absolute!important;}
+.zoom{zoom:1}
+.hidden{visibility:hidden!important;}
+.none{display:none!important;}
+
+.h50{height:50px!important;}
+.h80{height:80px!important;}
+.h100{height:100px!important;}
+.h200{height:200px!important;}
+.h{height:100%!important;}
+.text-explode{color:#ccc!important;}
+.text-white{color:white!important;}
+
+.color-info-alt{color:#669}
+.color-reverse{color:#fff}
+.color-gray-darker{color:#222}
+.color-gray-dark{color:#333}
+.color-gray-light{color:#777}
+.color-gray-lighter{color:#eee}
+
+a.bg-white,a.bg-white:hover{background-color:#fff !important;color:#444 !important;}
+a.bg-primary,a.bg-primary:hover{background-color:#5C90D2 !important;color:#fff !important;}
+a.bg-success,a.bg-success:hover{background-color:#46C37B !important;color:#fff !important;}
+a.bg-info,a.bg-info:hover{background-color:#4A9BFF !important;color:#fff !important;}
+a.bg-warning,a.bg-warning:hover{background-color:#f0a63a !important;color:#fff !important;}
+a.bg-danger,a.bg-danger:hover{background-color:#c94d3c !important;color:#fff !important;}
+a.bg-orange,a.bg-orange:hover{background-color:#EF9549 !important;color:#fff !important;}
+
+.bg-white{background-color:#fff !important;color:#444 !important;}
+.bg-bright1{background-color:#fafafa !important;color:#767676 !important;}
+.bg-bright2{background-color:#f5f5f5 !important;color:#767676 !important;}
+.bg-bright3{background-color:#eee !important;color:#444 !important;}
+.bg-bright4{background-color:#ddd !important;color:#444 !important;}
+.bg-bright5{background-color:#999 !important;color:#444 !important;}
+
+.bg-primary{background-color:#5C90D2 !important;color:#fff !important;}
+.bg-primary-light{background-color:#40DEC8 !important;color:#fff !important;}
+.bg-success{background-color:#46C37B !important;color:#fff !important;}
+.bg-info{background-color:#4A9BFF !important;color:#fff !important;}
+.bg-warning{background-color:#f0a63a !important;color:#fff !important;}
+.bg-danger{background-color:#c94d3c !important;color:#fff !important;}
+.bg-orange{background-color:#EF9549 !important;color:#fff !important;}
+.bg-violet{background-color:#669 !important;color:#fff !important;}
+.bg-dark{background-color:#242633 !important;color:#fff !important;}
+.bg-reverse{background-color:#fff !important;color:#767676 !important;}
+
+img.img30_30{width:30px;height:30px}
+img.img64_64{width:64px;height:64px}
+img.img80_80{width:80px;height:80px}
+
+.text-small{font-size:12px}
+.text-normal{font-size:14px}
+.text-huge{font-size:72px}
+.text-large{font-size:50px}
+
+.size-h1{font-size:36px}
+.size-h2{font-size:30px}
+.size-h3{font-size:24px}
+.size-h4{font-size:18px}
+
+.text-thin{font-weight:300}
+.text-ultralight{font-weight:100}
+.divider{display:block;height:10px}
+
+.divider-sm{height:15px}
+.divider-md{height:20px}
+.divider-lg{height:30px}
+.divider-xl{height:50px}
+
+.space{display:inline;padding:5px}
+.space-md{padding:15px}
+.space-lg{padding:25px}
+.bordered{border: 1px solid #ddd;}
+

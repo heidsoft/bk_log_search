@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/*===================================================* * 消息状态
+\*===================================================*/
+.king-notice-box {
+  margin-left: 10px;
+  padding: 10px;
+  padding-left: 33px;
+  text-align: left;
+  display: inline-block; }
+  .king-notice-box.king-notice-warning {
+    background: url(../images/notice_warning_icon.png) no-repeat left center; }
+  .king-notice-box.king-notice-success {
+    background: url(../images/notice_success_icon.png) no-repeat left center; }
+  .king-notice-box.king-notice-fail {
+    background: url(../images/notice_fail_icon.png) no-repeat left center; }
+  .king-notice-box.king-notice-question {
+    background: url(../images/notice_question_icon.png) no-repeat left center; }
+  .king-notice-box.king-notice-sad {
+    background: url(../images/notice_sad_icon.png) no-repeat left center; }
+  .king-notice-box.king-notice-happy {
+    background: url(../images/notice_happy_icon.png) no-repeat left center; }
+  .king-notice-box .king-notice-text {
+    margin: 0;
+    line-height: 30px;
+    padding-left: 8px;
+    min-width: 150px; }
+
+/*===================================================* * 消息状态2
+\*===================================================*/
+.king-notice-success.king-notice2 {
+  background-color: white !important;
+  padding: 8px;
+  border-radius: 6px;
+  position: relative; }
+  .king-notice-success.king-notice2.king-notice2-large {
+    padding: 15px; }
+    .king-notice-success.king-notice2.king-notice2-large i {
+      font-size: 36px; }
+  .king-notice-success.king-notice2 i {
+    color: #6cd697;
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    font-size: 18px; }
+  .king-notice-success.king-notice2 .notice-text {
+    margin-left: 25px; }
+    .king-notice-success.king-notice2 .notice-text h4 {
+      font-size: 13px;
+      color: #444;
+      margin: 0 0 5px 0; }
+    .king-notice-success.king-notice2 .notice-text p {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 0; }
+
+.king-notice-success.notice-borders {
+  border: 1px solid #e4f7ec; }
+
+.king-notice-info.king-notice2 {
+  background-color: white !important;
+  padding: 8px;
+  border-radius: 6px;
+  position: relative; }
+  .king-notice-info.king-notice2.king-notice2-large {
+    padding: 15px; }
+    .king-notice-info.king-notice2.king-notice2-large i {
+      font-size: 36px; }
+  .king-notice-info.king-notice2 i {
+    color: #99cbff;
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    font-size: 18px; }
+  .king-notice-info.king-notice2 .notice-text {
+    margin-left: 25px; }
+    .king-notice-info.king-notice2 .notice-text h4 {
+      font-size: 13px;
+      color: #444;
+      margin: 0 0 5px 0; }
+    .king-notice-info.king-notice2 .notice-text p {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 0; }
+
+.king-notice-info.notice-borders {
+  border: 1px solid white; }
+
+.king-notice-warning.king-notice2 {
+  background-color: #fff5e2 !important;
+  padding: 8px;
+  border-radius: 6px;
+  position: relative; }
+  .king-notice-warning.king-notice2.king-notice2-large {
+    padding: 15px; }
+    .king-notice-warning.king-notice2.king-notice2-large i {
+      font-size: 36px; }
+  .king-notice-warning.king-notice2 i {
+    color: #ffc858;
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    font-size: 18px; }
+  .king-notice-warning.king-notice2 .notice-text {
+    margin-left: 25px; }
+    .king-notice-warning.king-notice2 .notice-text h4 {
+      font-size: 13px;
+      color: #444;
+      margin: 0 0 5px 0; }
+    .king-notice-warning.king-notice2 .notice-text p {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 0; }
+
+.king-notice-warning.notice-borders {
+  border: 1px solid #ffebc3; }
+
+.king-notice-danger.king-notice2 {
+  background-color: white !important;
+  padding: 8px;
+  border-radius: 6px;
+  position: relative; }
+  .king-notice-danger.king-notice2.king-notice2-large {
+    padding: 15px; }
+    .king-notice-danger.king-notice2.king-notice2-large i {
+      font-size: 36px; }
+  .king-notice-danger.king-notice2 i {
+    color: #ff8b8b;
+    position: absolute;
+    top: 50%;
+    margin-top: -9px;
+    font-size: 18px; }
+  .king-notice-danger.king-notice2 .notice-text {
+    margin-left: 25px; }
+    .king-notice-danger.king-notice2 .notice-text h4 {
+      font-size: 13px;
+      color: #444;
+      margin: 0 0 5px 0; }
+    .king-notice-danger.king-notice2 .notice-text p {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 0; }
+
+.king-notice-danger.notice-borders {
+  border: 1px solid white; }
+
+/*===================================================* * 消息状态3
+\*===================================================*/
+.king-notice3 {
+  text-align: center;
+  font-family: "微软雅黑";
+  color: #666; }
+  .king-notice3 .king-notice-img {
+    width: 78px;
+    height: 78px;
+    display: block;
+    margin: 5px auto 20px;
+    background: url(../images/notice3-icon.png) no-repeat; }
+  .king-notice3 .f12 {
+    font-family: "宋体";
+    color: #98a1b3; }
+  .king-notice3 .king-notice3-color {
+    color: #ff7d7d; }
+  .king-notice3.king-notice-wating .king-notice-img {
+    background-position: 0 0; }
+  .king-notice3.king-notice-success .king-notice-img {
+    background-position: 0 -78px; }
+  .king-notice3.king-notice-fail .king-notice-img {
+    background-position: 0 -156px; }

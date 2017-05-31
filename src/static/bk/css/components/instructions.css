@@ -1,0 +1,39 @@
+/*===================================================* * instructions
+\*===================================================*/
+.king-instruction {
+  font-size: 12px;
+  line-height: 20px;
+  overflow: hidden;
+  padding: 10px 20px;
+  cursor: default; }
+  .king-instruction span {
+    color: red; }
+  .king-instruction h5 {
+    font-weight: 700;
+    font-size: 12px;
+    margin: 0px;
+    line-height: 20px; }
+  .king-instruction p {
+    margin: 0;
+    padding: 0;
+    line-height: 20px; }
+  .king-instruction.king-instruction-info {
+    color: #177fff;
+    border: #b0d3ff 1px solid;
+    background: #e3f0ff; }
+  .king-instruction.king-instruction-primary {
+    color: #3675c5;
+    border: #acc6e8 1px solid;
+    background-color: #d4e2f3; }
+  .king-instruction.king-instruction-warning {
+    color: #efa231;
+    border: #fae2bf 1px solid;
+    background-color: #fef7ee; }
+  .king-instruction.king-instruction-danger {
+    color: #c54736;
+    border: #e8b3ac 1px solid;
+    background-color: #f3d8d4; }
+  .king-instruction.king-instruction-success {
+    color: #36903a;
+    border: #b0e2b3 1px solid;
+    background-color: #e8f6e9; }

@@ -1,0 +1,24 @@
+<div class="content-wrapper">
+    <div class="no-host-content" align="center" style="margin-top:10%">
+        <img style="height:201px;" src="${SITE_URL}static/img/403.png" style="height:201px;">
+        <h4 class="pt15">对不起，您当前没有可操作的业务，您可尝试如下操作</h4>
+        <ul class="pt15" style="width:350px;" align="left">
+                <li class="text-left">1.点此
+                    <div id="home_creat_one" style="display:inline-block;">
+                        <a id="home_creat_one" onclick="create_one()" style="cursor:pointer;color:blue">新建业务</a>
+                    </div>
+                </li>
+            <li class="text-left">2.联系您公司已有权限的同事为您开通权限</li>
+        </ul>
+    </div>
+</div>
+<div class="control-sidebar-bg"></div>
+</div>
+<script>
+    function create_one(){
+        h = window.location.host.split('.');
+        h.shift();
+        h = "http://cmdb." + h.join('.');
+        window.location.href = h;
+     }
+</script>

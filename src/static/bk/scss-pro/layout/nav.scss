@@ -1,0 +1,1789 @@
+@charset "utf-8";
+@import "../base/conf";
+/* 横向导航一*/
+.king-horizontal-nav1 {
+    min-height:45px;
+    width:100%;
+    height: 45px;
+    margin-bottom: 0px;
+    background-color: #333;
+    border-radius: 0px;
+    border: none;
+    line-height: 45px;
+    z-index: 100;
+
+    .navbar-container{
+        overflow: hidden;
+    }
+
+    .logo{
+        height: 30px;
+        margin-top: 8px;
+    }
+
+    .navbar-brand {
+        width:216px;
+        height:45px;
+        padding: 0 0 0 18px;
+        border-right:1px solid #222222;
+        line-height: 45px;
+        font-size: 22px;
+        color: #FFFFFF;
+
+        h1 {
+            display: inline;
+            margin: 0px;
+            padding: 0px;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: inherit;
+        }
+    }
+
+    .fa-leaf {
+        margin-right: 6px;
+        font-size: 24px;
+    }
+
+    .img-rounded {
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+    }
+
+    & li a {
+        padding: 0 18px 0 15px;
+        height: 45px;
+        line-height: 45px;
+        display: inline-block;
+        color: #FFF;
+    }
+
+    .nav{
+        & > li img {
+            margin-right: 6px;
+        }
+        & > li > a:hover,
+        & > li > a:focus {
+            background-color: #191818;
+        }
+        & > li.active a {
+            background-color: #191818;
+        }
+    }
+    .product-select {
+        width: 422px;
+    }
+    .product-select select {
+        border-radius: 2px;
+    }
+    .product-select .control-label {
+        float:left;
+        width: 102px;
+        color: #FFF;
+        text-align: right;
+    }
+    .product-select .control-select {
+        float:left;
+        width: 320px;
+    }
+}
+
+@mixin king-horizontal-nav1-maker($backgroundColor, $hoverColor, $borderColor, $color){
+    &.king-horizontal-nav1{
+        background-color: $backgroundColor;
+        .navbar-brand {
+            border-right:1px solid $borderColor;
+        }
+        .nav{
+            & > li > a:hover,
+            & > li > a:focus {
+                background-color: $hoverColor;
+            }
+            & > li.active a {
+                background-color: $hoverColor;
+            }
+        }
+        & li a {
+            color: $color;
+        }
+    }
+}
+
+.king-horizontal-info {
+    @include king-horizontal-nav1-maker($infoBgColor, $infoHoverColor, $infoBorderColor, $infoFontColor);
+}
+.king-horizontal-default {
+    @include king-horizontal-nav1-maker($defaultBgColor, $defaultHoverColor, $defaultBorderColor, $defaultFontColor);
+}
+.king-horizontal-primary {
+    @include king-horizontal-nav1-maker($primaryBgColor, $primaryHoverColor, $primaryBorderColor, $primaryFontColor);
+}
+.king-horizontal-warning {
+    @include king-horizontal-nav1-maker($warningBgColor, $warningHoverColor, $warningBorderColor, $warningFontColor);
+}
+.king-horizontal-success {
+    @include king-horizontal-nav1-maker($successBgColor, $successHoverColor, $successBorderColor, $successFontColor);
+}
+.king-horizontal-danger {
+    @include king-horizontal-nav1-maker($dangerBgColor, $dangerHoverColor, $dangerBorderColor, $dangerFontColor);
+}
+
+/* 横向导航菜单样例二*/
+.king-horizontal-nav2 {
+    border: 0;
+    border-radius: 0;
+    background: #fafafa;
+    border-bottom: 1px solid #eee;
+
+    .navbar-header {
+        height: 50px;
+        margin-right: 20px;
+        .navbar-toggle {
+            margin-top:3px;
+        }
+
+
+    }
+    .navbar-nav {
+        padding:0 0 0 20px;
+
+        li{
+            a{
+                height:50px;
+                line-height:50px;
+                color: #555;
+                padding:0 15px;
+
+                i {
+                    position: relative;
+                    top: 2px;
+                }
+
+                &:link,
+                &:visited{
+                    color: #555;
+                }
+                &:hover,
+                &:active{
+                    background: #4a9bff;
+                    color: #fff;
+                    i {
+                        background-image: url(../img/glyphicons-halflings.png);
+                    }
+                }
+            }
+
+            &.king-navbar-active a {
+                background: #4a9bff;
+                color: #fff;
+
+                i {
+                    background-image: url(../img/glyphicons-halflings.png);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .king-horizontal-nav2{
+        .navbar-collapse{
+            padding-left: 0;
+        }
+    }
+    .king-header2{
+        .navbar-collapse{
+            padding-left: 15px;
+        }
+    }
+}
+
+@mixin king-horizontal-nav2-maker($backgroundColor, $hoverColor, $borderColor, $color){
+    &.king-horizontal-nav2{
+        .navbar-nav{
+            li{
+                a{
+                    &:hover,
+                    &:active{
+                        background: $backgroundColor;
+                        color: $color;
+                    }
+                }
+
+                &.king-navbar-active a {
+                    background: $backgroundColor;
+                    color: $color;
+                }
+            }
+        }
+    }
+}
+
+.king-horizontal-info {
+    @include king-horizontal-nav2-maker($infoBgColor, $infoHoverColor, $infoBorderColor, $infoFontColor);
+}
+.king-horizontal-default {
+    @include king-horizontal-nav2-maker($defaultBgColor, $defaultHoverColor, $defaultBorderColor, $defaultFontColor);
+}
+.king-horizontal-primary {
+    @include king-horizontal-nav2-maker($primaryBgColor, $primaryHoverColor, $primaryBorderColor, $primaryFontColor);
+}
+.king-horizontal-warning {
+    @include king-horizontal-nav2-maker($warningBgColor, $warningHoverColor, $warningBorderColor, $warningFontColor);
+}
+.king-horizontal-success {
+    @include king-horizontal-nav2-maker($successBgColor, $successHoverColor, $successBorderColor, $successFontColor);
+}
+.king-horizontal-danger {
+    @include king-horizontal-nav2-maker($dangerBgColor, $dangerHoverColor, $dangerBorderColor, $dangerFontColor);
+}
+
+/* 横向导航菜单样例三*/
+.king-horizontal-nav3 {
+    border:none;
+    border-radius:0;
+    background:#2e3e4e;
+    margin-bottom: 0;
+    height: 50px;
+    .dropdown-menu{
+        padding: 0;
+    }
+    .navbar-header{
+        .navbar-brand {
+            color: #fff;
+            margin-right:50px;
+
+            .logo{
+                margin-top: -5px;
+            }
+        }
+        .navbar-toggle {
+            margin-top:3px;
+            .icon-bar {
+                background:#fff;
+            }
+        }
+    }
+
+    .navbar-nav{
+        > li {
+            > a {
+                color: #fff;
+                height:50px;
+                padding-right:20px;
+                padding-left:20px;
+
+                &:hover,
+                &:focus {
+                    color: #fff;
+                    background: lighten(#2e3e4e, 10%);
+                }
+            }
+        }
+        .bk-cur{
+            & > a{
+                color: #fff;
+                background: darken(#2e3e4e, 10%) !important;
+            }
+        }
+    }
+
+    .navbar-form {
+        padding:0;
+        margin:4px 0 0 15px;
+        border:none;
+    }
+
+    .form-control {
+        -webkit-border-radius:24px!important;
+        -moz-border-radius:24px!important;
+        border-radius:24px!important;
+        margin-top:8px;
+        border:none;
+    }
+
+    .avatar {
+        width:30px;
+        height:30px;
+        border-radius:50%;
+        margin-top:-5px;
+    }
+}
+
+@mixin king-horizontal-nav3-maker($backgroundColor, $hoverColor, $borderColor, $color){
+    &.king-horizontal-nav3{
+        background: $backgroundColor;
+
+        .navbar-nav{
+            > li {
+                > a {
+                    color: $color;
+
+                    &:hover,
+                    &:focus {
+                        color: $color;
+                        background: lighten($backgroundColor, 10%);
+                    }
+                }
+            }
+
+            .bk-cur{
+                a{
+                    color: $color;
+                    background: darken($backgroundColor, 10%) !important;
+                }
+            }
+        }
+    }
+}
+
+.king-horizontal-info {
+    @include king-horizontal-nav3-maker($infoBgColor, $infoHoverColor, $infoBorderColor, $infoFontColor);
+}
+.king-horizontal-default {
+    @include king-horizontal-nav3-maker($defaultBgColor, $defaultHoverColor, $defaultBorderColor, $defaultFontColor);
+}
+.king-horizontal-primary {
+    @include king-horizontal-nav3-maker($primaryBgColor, $primaryHoverColor, $primaryBorderColor, $primaryFontColor);
+}
+.king-horizontal-warning {
+    @include king-horizontal-nav3-maker($warningBgColor, $warningHoverColor, $warningBorderColor, $warningFontColor);
+}
+.king-horizontal-success {
+    @include king-horizontal-nav3-maker($successBgColor, $successHoverColor, $successBorderColor, $successFontColor);
+}
+.king-horizontal-danger {
+    @include king-horizontal-nav3-maker($dangerBgColor, $dangerHoverColor, $dangerBorderColor, $dangerFontColor);
+}
+
+@media (max-width:767px) {
+    .king-horizontal-nav3 .navbar-nav .open .dropdown-menu li a {
+        color: #fff;
+    }
+}
+
+/* 横向导航菜单样例四*/
+.king-horizontal-nav4 {
+    width: 100%;
+    height: 58px;
+    border-width: 0px 0;
+    border-style: solid;
+    border-color: #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #fafafa;
+    position: relative;
+
+    .logo_wrap {
+        float: left;
+        height: 41px;
+        margin-top: 7px;
+
+        a{
+            float: left;
+            display: block;
+            font-size: 14px;
+
+            &.logo_app {
+                width: 136px;
+                height: 41px;
+                text-indent: -9999px;
+                background: url(img/example_navs/logo.png) no-repeat;
+            }
+            &.logo_business {
+                margin-top: 2px;
+                width: 45px;
+                height: 40px;
+            }
+        }
+        span{
+            float: left;
+            display: block;
+            margin: 6px 16px 0;
+            width: 1px;
+            height: 34px;
+            border-left: 1px solid #ccc;
+        }
+    }
+    a{
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    .nav_wrap{
+        float: right;
+        span {
+            float: left;
+            margin-left: 32px;
+            text-align: center;
+            line-height: 58px;
+            font-size: 14px;
+        }
+        > ul {
+            position: relative;
+            float: left;
+            z-index: 10;
+
+            > li {
+                float: left;
+                position: relative;
+
+                > a {
+                    display: block;
+                    line-height: 58px;
+                    font-size: 16px;
+                    color: #667;
+                    padding: 0 14px;
+
+                     > i {
+                        position: absolute;
+                        right: 6px;
+                        top: 28px;
+                        display: block;
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-left: 6px solid transparent;
+                        border-right: 6px solid transparent;
+                        border-top: 6px solid #ccc;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+
+        li{
+            &.active a{
+                color: #70B419;
+                border-left: 1px solid transparent;
+                border-right: 1px solid transparent;
+                padding: 0 22px 0 14px;
+            }
+
+            a:hover {
+                color: #70B419;
+            }
+        }
+    }
+}
+
+.king-horizontal-nav4 .nav_wrap li.active:before {
+    border-color: #c9c9c9 transparent;
+    margin-top: -1px;
+}
+.king-horizontal-nav4 .nav_wrap li ul.submenu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 99%;
+    border: 1px solid #d3d3d3;
+    border-top: 0;
+    background: #fff;
+    z-index: 10;
+    display: none;
+}
+.king-horizontal-nav4 .nav_wrap li ul.submenu li {
+    width: 100%;
+}
+.king-horizontal-nav4 .nav_wrap li ul.submenu li a {
+    display: block;
+    padding: 0 12px;
+    height: 30px;
+    line-height: 30px;
+    color: #667;
+    font-size: 16px;
+}
+.king-horizontal-nav4 .nav_wrap li ul.submenu li a:hover {
+    color: #666;
+    background: #e5e5e5;
+}
+.king-horizontal-nav4 .nav_wrap li.has_submenu:hover ul.subnavbar {
+    display: block;
+}
+.king-horizontal-nav4 .nav_wrap .subnavbar {
+    position: absolute;
+    top: 58px;
+    left: -40px;
+    width: 500%;
+    padding-top: 6px;
+    display: none;
+}
+.king-horizontal-nav4 .tmp li.active a {
+    padding: 0 14px;
+    border: 0;
+}
+.king-horizontal-nav4 .nav_wrap .subnavbar li {
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    background: #e3e3e3;
+}
+.king-horizontal-nav4 .nav_wrap .subnavbar li a {
+    display: block;
+    padding: 0 14px;
+    line-height: 28px;
+    color: #666;
+    font-size: 12px;
+}
+.king-horizontal-nav4 .nav_wrap .subnavbar li.current, .nav_wrap .subnavbar li:hover {
+    background: #70B419;
+}
+.king-horizontal-nav4 .nav_wrap .subnavbar li.current a, .nav_wrap .subnavbar li:hover a {
+    color: #fff;
+}
+.king-horizontal-nav4 .nav_wrap .subnavbar li ul.has_sub {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: none;
+}
+.king-horizontal-nav4 .nav_wrap .subnavbar li ul.has_sub li {
+    float: inherit;
+    margin: 0;
+}
+.king-horizontal-nav4 .nav_wrap .subnavbar li ul.has_sub li a {
+    color: #666;
+}
+.king-horizontal-nav4 .nav_wrap .subnavbar li ul.has_sub li:hover a {
+    color: #fff;
+}
+.king-horizontal-nav4 .nav_wrap .subnavbar i {
+    position: absolute;
+    right: 6px;
+    top: 12px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #666;
+    border-bottom: none;
+}
+.king-horizontal-nav4 .nav_wrap .subnavbar li:hover ul.has_sub {
+    display: block;
+}
+.king-horizontal-nav4 .nav_wrap li:hover ul.subnavbar {
+    display: block;
+}
+/*===================================================*\ *
+    king-header2
+\*===================================================*/
+.king-header2 {
+    width:100%;
+    overflow: visible;
+    &.king-header-fixed {
+        position:fixed;
+        top:0;
+        z-index:400;
+    }
+    .navbar-header {
+        color:#d7e5f8;
+    }
+    .navbar-brand {
+        position:relative;
+        display:block;
+        font-size:16px;
+        color:#fff;
+
+        .txt {
+            padding:0 10px 0 35px;
+        }
+
+        .shape {
+            position:absolute;
+            display:block;
+            top:0;
+            left:0;
+            width:6px;
+            height:6px;
+            background-color:#61cc2f;
+        }
+
+        .shape1 {
+            left:20px;
+            top:18px;
+        }
+
+        .shape2 {
+            left:30px;
+            top:16px;
+            background-color:#ffbe66;
+            -webkit-transform:rotate(45deg);
+            transform:rotate(45deg);
+        }
+
+        .shape3 {
+            left:20px;
+            top:26px;
+        }
+
+        .shape4 {
+            left:28px;
+            top:26px;
+        }
+    }
+
+    li{
+        .avatar {
+            width:40px;
+            height:40px;
+            display:inline-block;
+            position: relative;
+            margin:-12px 0 -12px 10px;
+
+            img {
+                border-radius: 50%;
+                width:40px;
+                height:40px;
+            }
+        }
+    }
+
+    .navbar-toggle-sm {
+        line-height:14px;
+        margin-right:0;
+    }
+
+    &.navbar-blue {
+        background-color:#147bd0;
+        border-radius:0;
+        border:0;
+
+        .nav{
+            > li{
+                > a {
+                    color:#d7e5f8;
+                    -webkit-transition:all 0.13s linear;
+                    transition:all 0.13s linear;
+
+                    &:hover,
+                    &:focus,
+                    &.active{
+                        color:#fff;
+                        background-color:#0669BB;
+                    }
+                }
+
+                &:hover,
+                &:focus{
+                    color:#fff;
+                    background-color:#0669BB;
+                }
+            }
+            .open{
+                > a{
+                    color:#fff;
+                    background-color:#0669BB;
+
+                    &:hover,
+                    &:focus{
+                        color:#fff;
+                        background-color:#0669BB;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-nav .open .dropdown-menu {
+        background-color:#fff;
+    }
+    .caret-down {
+        display:inline-block;
+        width:0;
+        height:0;
+        border:3px solid #bdd0eb;
+        border-left-color:transparent;
+        border-top-color:transparent;
+        margin:6px 0 0 10px;
+    }
+
+}
+.king-business-select {
+    margin: 15px;
+}
+.king-business-title {
+    font-weight: bold;
+}
+
+@mixin king-horizontal-header2-maker($backgroundColor, $hoverColor, $borderColor, $color){
+    &.king-header2 {
+        background-color: $backgroundColor;
+        border-radius:0;
+        border:0;
+
+        .nav{
+            > li{
+                > a {
+                    color: $color;
+                    -webkit-transition:all 0.13s linear;
+                    transition:all 0.13s linear;
+
+                    &:hover,
+                    &:focus,
+                    &.active{
+                        color: $color;
+                        background-color: $hoverColor;
+                    }
+                }
+
+                &:hover,
+                &:focus{
+                    color: $color;
+                    background-color: $hoverColor;
+                }
+            }
+            .open{
+                > a{
+                    color: $color;
+                    background-color: $hoverColor;
+
+                    &:hover,
+                    &:focus{
+                        color: $color;
+                        background-color: $hoverColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.king-horizontal-info {
+    @include king-horizontal-header2-maker($infoBgColor, $infoHoverColor, $infoBorderColor, $infoFontColor);
+}
+.king-horizontal-default {
+    @include king-horizontal-header2-maker($defaultBgColor, $defaultHoverColor, $defaultBorderColor, $defaultFontColor);
+}
+.king-horizontal-primary {
+    @include king-horizontal-header2-maker($primaryBgColor, $primaryHoverColor, $primaryBorderColor, $primaryFontColor);
+}
+.king-horizontal-warning {
+    @include king-horizontal-header2-maker($warningBgColor, $warningHoverColor, $warningBorderColor, $warningFontColor);
+}
+.king-horizontal-success {
+    @include king-horizontal-header2-maker($successBgColor, $successHoverColor, $successBorderColor, $successFontColor);
+}
+.king-horizontal-danger {
+    @include king-horizontal-header2-maker($dangerBgColor, $dangerHoverColor, $dangerBorderColor, $dangerFontColor);
+}
+
+/* 纵向导航菜单样例十*/
+.king-vertical-nav10{
+    width: 80px;
+    background: #2a2b3c;
+
+    &.king-full-height{
+        height: 100%;
+    }
+
+    .sidebar-inner{
+        padding: 80px 0px 120px 0px;
+    }
+
+    ul {
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    .navi li a{
+        display: block;
+        width: 100%;
+        height: 65px;
+        padding-top: 13px;
+        text-align:center;
+        color: #fff;
+        font-size: 12px;
+        text-decoration: none;
+    }
+
+    .navi > li{
+        position: relative;
+        border-bottom: #252636 1px solid;
+
+        &:hover{
+            background-color: #252636;
+            border-bottom: #252636 1px solid;
+
+            .sub-menu{
+                display: block;z-index: 10;
+            }
+        }
+
+        &.active,
+        &.active:hover{
+            background-color: #a54e4c;
+        }
+
+        .fa{
+            display: block;
+            font-size: 20px;
+            color: #fff;
+        }
+    }
+
+    .navi .sub-menu{
+        display: none;
+        position: absolute;
+        left: 80px;
+        top:0px;
+        min-width:200px;
+        padding: 10px;
+        background-color: #252636;
+
+        li{
+            border: none;
+            padding:0;
+            line-height: 40px;
+            &.active a{
+                background-color: #a54e4c;
+                color: #fff;
+            }
+            a{
+                position: relative;
+                display: block;
+                height:auto;
+                line-height: 1em;
+                padding:8px 20px;
+                color: #fff;
+                white-space: nowrap;
+                text-align: left;
+                &:hover{
+                    background-color: #a54e4c;
+                    color: #fff;
+                }
+             }
+        }
+    }
+    .navi .has-submenu > a{cursor: default;}
+}
+
+
+@mixin king-vertical-nav10-maker($backgroundColor){
+    &.king-vertical-nav10{
+        background-color: darken($backgroundColor, 10%);
+        .navi > li{
+            border-bottom: darken($backgroundColor, 15%) 1px solid;
+            &:hover{
+                background-color: $backgroundColor;
+                border-bottom: $backgroundColor 1px solid;
+            }
+            &.active,
+            &.active:hover{
+                background-color: $backgroundColor;
+            }
+        }
+
+        .navi .sub-menu{
+            background-color: $backgroundColor;
+            li{
+                &.active a{
+                    background-color: darken($backgroundColor, 10%);
+                }
+                a{
+                    &:hover{
+                        background-color: darken($backgroundColor, 10%);
+                    }
+                 }
+            }
+        }
+    }
+}
+
+.king-vertical-nav10-info{
+    @include king-vertical-nav10-maker($infoBgColor);
+}
+.king-vertical-nav10-primary{
+    @include king-vertical-nav10-maker($primaryBgColor);
+}
+.king-vertical-nav10-warning{
+    @include king-vertical-nav10-maker($warningBgColor);
+}
+.king-vertical-nav10-danger{
+    @include king-vertical-nav10-maker($dangerBgColor);
+}
+.king-vertical-nav10-success{
+    @include king-vertical-nav10-maker($successBgColor);
+}
+
+
+/*===================================================*\
+ * 由other/index.scss迁移过来，2016.1.27.
+\*===================================================*/
+
+
+/*===================================================*\
+ * 自定义横向导航栏样式
+\*===================================================*/
+.king-header {
+    border-bottom:1px solid #eee;
+    position:relative;
+    width:100%;
+    min-width:900px;
+    height:50px;
+    background:white;
+    a {
+        text-decoration:none;
+    }
+}
+.king-header-inner {
+    height:50px;
+    margin:0 auto;
+    min-width:900px;
+    max-width:1200px;
+}
+.king-header-brand {
+    float:left;
+    height:50px;
+    img {
+        margin-top:10px;
+        margin-left:5px;
+    }
+}
+.king-header-list {
+    float:right;
+    height:50px;
+    >ul {
+        margin:0px;
+        padding:0;
+        font-size:0;
+        -webkit-text-size-adjust:none;
+        >li {
+            display:inline-block;
+            height:100%;
+            line-height:50px;
+            font-size:12px;
+            position:relative;
+            >a {
+                color:#696969;
+                font-size:14px;
+                position:relative;
+                display:block;
+                span {
+                    border-left:1px solid #f2f2f2;
+                    padding:0px 15px;
+                }
+            }
+        }
+    }
+    &.list2{
+        a {
+            padding-left:15px;
+            padding-right:15px;
+        }
+        >ul{
+            >li{
+                a>{
+                    border-left:none;
+                }
+            }
+        }
+    }
+    &.list1 {
+        padding-left:20px;
+    }
+    .list-home {
+        border-left:none;
+    }
+}
+
+/*===================================================*\
+ * 自定义横向导航栏样式 horizontal_nav5
+\*===================================================*/
+.king-header1{
+    .king-header-list{
+        >ul{
+            >li{
+                a{
+                    &:after{
+                        content:"";
+                        height:2px;
+                        width:100%;
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        z-index:203;
+                        background:#909090;
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
+    .list1{
+        >ul{
+            >li{
+                &:hover{
+                    >a{
+                        &:after{
+                            display:block;
+                        }
+                    }
+                }
+                .active{
+                    >a{
+                        &:after{
+                            display:block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* king-header1 blue */
+.king-header1.king-header-blue .king-header-list.list1>ul>li:hover>a,.king-header1.king-header-blue .king-header-list.list1>ul>li.active>a {
+    color:#4A9BFF;
+}
+.king-header1.king-header-blue .king-header-list>ul>li>a:after {
+    background:#4A9BFF;
+}
+/* king-header1 blue2 */
+.king-header1.king-header-blue2 .king-header-list.list1>ul>li:hover>a,.king-header1.king-header-blue2 .king-header-list.list1>ul>li.active>a {
+    color:#5C90D2;
+}
+.king-header1.king-header-blue2 .king-header-list>ul>li>a:after {
+    background:#5C90D2;
+}
+/* king-header1 red */
+.king-header1.king-header-red .king-header-list.list1>ul>li:hover>a,.king-header1.king-header-red .king-header-list.list1>ul>li.active>a {
+    color:#D26A5C;
+}
+.king-header1.king-header-red .king-header-list>ul>li>a:after {
+    background:#D26A5C;
+}
+/* king-header1 green */
+.king-header1.king-header-green .king-header-list.list1>ul>li:hover>a,.king-header1.king-header-green .king-header-list.list1>ul>li.active>a {
+    color:#46C37B;
+}
+.king-header1.king-header-green .king-header-list>ul>li>a:after {
+    background:#46C37B;
+}
+/* king-header1 gold */
+.king-header1.king-header-gold .king-header-list.list1>ul>li:hover>a,.king-header1.king-header-gold .king-header-list.list1>ul>li.active>a {
+    color:#F3B760;
+}
+.king-header1.king-header-gold .king-header-list>ul>li>a:after {
+    background:#F3B760;
+}
+
+/*===================================================*\
+ * 自定义横向导航栏样式 horizontal_nav6
+\*===================================================*/
+.king-header2 {
+    margin-bottom:0;
+    box-shadow:1px 1px 2px #eee;
+    .king-header-list{
+        &.list1{
+            float:left;
+        }
+        >ul{
+            >li{
+                >a{
+                    &:after{
+                        content:"";
+                        height:4px;
+                        width:100%;
+                        position:absolute;
+                        left:0;
+                        bottom:-4px;
+                        z-index:203;
+                        background:#909090;
+                        display:none;
+                    }
+                    span{
+                        border-left:none;
+                    }
+                }
+            }
+        }
+    }
+    .list1{
+        >ul{
+            >li{
+                &:hover{
+                    >a{
+                        &:after{
+                            display:block;
+                        }
+                    }
+                }
+                &.active{
+                    >a{
+                        &:after{
+                            display:block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.king-header-blue{
+        .king-header-list{
+            &.list1{
+                >ul{
+                    >li{
+                        &:hover{
+                            >a{
+                                color:#4A9BFF;
+                            }
+                        }
+                        &.active{
+                            >a{
+                                color:#4A9BFF;
+                            }
+                        }
+                        >a:after{
+                            background:#4A9BFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.king-header-blue2{
+        .king-header-list{
+            &.list1{
+                >ul{
+                    >li{
+                        &:hover{
+                            >a{
+                                color:#5C90D2;
+                            }
+                        }
+                        &.active{
+                            >a{
+                                color:#5C90D2;
+                            }
+                        }
+                        >a{
+                            &:after{
+                                background:#5C90D2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.king-header-red{
+        .king-header-list{
+            &.list1{
+                >ul{
+                    >li{
+                        &:hover{
+                            >a{
+                                color:#D26A5C;
+                            }
+                        }
+                        &.active{
+                            >a{
+                                color:#D26A5C;
+                            }
+                        }
+                        >a{
+                            &:after{
+                                background:#D26A5C;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.king-header-green{
+        .king-header-list{
+            &.list1{
+                >ul{
+                    >li{
+                        &:hover{
+                            >a{
+                                color:#46C37B;
+                            }
+                        }
+                        &.active{
+                            >a{
+                                color:#46C37B;
+                            }
+                        }
+                        >a:after{
+                            background:#46C37B;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.king-header-gold{
+        .king-header-list{
+            &.list1{
+                >ul{
+                    >li{
+                        &:hover{
+                            >a{
+                                color:#F3B760;
+                            }
+                        }
+                        &.active{
+                            >a{
+                                color:#F3B760;
+                            }
+                        }
+                        >a:after{
+                            background:#F3B760;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*===================================================*\
+ * 自定义横向导航栏样式 horizontal_nav8
+\*===================================================*/
+.king-submenu {
+    margin:0;
+    padding:0px;
+    min-width:100%;
+    width:auto;
+    display:block;
+    white-space:nowrap;
+    position:absolute;
+    top:48px;
+    left:0;
+    border-top:2px solid #6ec2cc;
+    z-index:1003;
+    background:white;
+    display:none;
+    border-left:1px solid #eee;
+    border-right:1px solid #eee;
+    li{
+        border-bottom:1px solid #eee;
+        &:hover {
+            background:#f7f7f7;
+            a{
+                color:#6ec2cc;
+            }
+        }
+        a{
+            color:#696969;
+            padding:0 10px;
+            display:block;
+        }
+    }
+}
+.king-header4{
+    .list1{
+        >ul{
+            >li{
+                &:hover{
+                    .king-submenu{
+                        display:block;
+                    }
+                }
+            }
+        }
+    }
+    &.king-header-blue{
+        .king-header-list{
+            &.list1{
+                >ul{
+                    >li{
+                        &:hover{
+                            >a{
+                                color:#4A9BFF;
+                            }
+                        }
+                        &.active{
+                            >a{
+                                color:#4A9BFF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .king-submenu {
+            border-top:2px solid #4A9BFF;
+            li{
+                &:hover{
+                    a{
+                        color:#4A9BFF;
+                    }
+                }
+            }
+        }
+    }
+    &.king-header-blue2{
+        .king-header-list{
+            &.list1{
+                >ul{
+                    >li{
+                        &:hover{
+                            >a{
+                                color:#5C90D2;
+                            }
+                        }
+                        &.active{
+                            >a{
+                                color:#5C90D2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .king-submenu {
+            border-top:2px solid #5C90D2;
+            li{
+                &:hover{
+                    a{
+                        color:#5C90D2;
+                    }
+                }
+            }
+        }
+    }
+    &.king-header-red{
+        .king-header-list{
+            &.list1{
+                >ul{
+                    >li{
+                        &:hover{
+                            >a{
+                                color:#D26A5C;
+                            }
+                        }
+                        &.active{
+                            >a{
+                                color:#D26A5C;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .king-submenu {
+            border-top:2px solid #D26A5C;
+            li{
+                &:hover{
+                    a{
+                        color:#D26A5C;
+                    }
+                }
+            }
+        }
+    }
+    &.king-header-green{
+        .king-header-list{
+            &.list1{
+                >ul{
+                    >li{
+                        &:hover{
+                            >a{
+                                color:#46C37B;
+                            }
+                        }
+                        &.active{
+                            >a{
+                                color:#46C37B;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .king-submenu {
+            border-top:2px solid #46C37B;
+            li{
+                &:hover{
+                    a{
+                        color:#46C37B;
+                    }
+                }
+            }
+        }
+    }
+    &.king-header-gold{
+        .king-header-list{
+            &.list1{
+                >ul{
+                    >li{
+                        &:hover{
+                            >a{
+                                color:#F3B760;
+                            }
+                        }
+                        &.active{
+                            >a{
+                                color:#F3B760;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .king-submenu {
+            border-top:2px solid #F3B760;
+            li{
+                &:hover{
+                    a{
+                        color:#F3B760;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*===================================================*\
+ * topbar Breadcrumb template5
+\*===================================================*/
+.king-topbar {
+    padding:15px 0;
+    background-color:#f6f8f8;
+    border-bottom:1px solid #e3e5e7;
+    overflow:hidden;
+    h1 {
+        font-size:16px;
+        font-weight:bold;
+        margin:0;
+    }
+    .title {
+        display:inline-block;
+        padding:15px 0;
+        line-height:20px;
+        margin-right:20px;
+        font-size:16px;
+        font-weight:600;
+    }
+    .king-topbar-nav {
+        display:inline-block;
+        vertical-align:top;
+        li {
+            display:inline-block;
+            margin-right:18px;
+            &:last-child {
+                margin-right:0;
+            }
+            a {
+                display:block;
+                padding:15px 5px;
+                color:#666;
+                -webkit-transition:all 0.13s linear;
+                transition:all 0.13s linear;
+                &:hover{
+                    color:#23b7e5;
+                    text-decoration:none;
+                }
+                &:focus {
+                    color:#23b7e5;
+                    text-decoration:none;
+                }
+            }
+            &.active{
+                a {
+                    color:#23b7e5;
+                    -webkit-box-shadow:inset 0 -1px 0 rgba(35,183,229,1);
+                    box-shadow:inset 0 -1px 0 rgba(35,183,229,1);
+                }
+            }
+        }
+    }
+    .row {
+        width:1200px;
+        margin:auto;
+    }
+    .breadcrumb {
+        margin:0;
+        padding:0;
+    }
+}
+.king-body {
+    width:1200px;
+    margin:auto;
+}
+.king-no-bg {
+    background:none !important;
+}
+.king-no-tm {
+    margin-top:0 !important;
+}
+.king-no-m {
+    margin:0 !important;
+}
+.inline-block {
+    display:inline-block !important;
+    vertical-align:middle;
+}
+.king-select {
+    width:auto;
+}
+.magic-topbar-container {
+    z-index:999;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    font-family:microsoft yahei,Arial,sans-serif;
+    font-size:16px;
+    position:fixed;
+    top:0;
+    width:100%;
+    height:auto;
+    padding:15px 30px;
+    text-align:center;
+}
+
+/*===================================================*\
+ * 自定义横向导航栏样式 horizontal_nav10
+\*===================================================*/
+.king-horizontal-nav10{
+    background-color:#262626;
+    height:54px;
+    width:100%;
+    min-width: 800px;
+    .navbar-brand{
+        width:220px;
+        height:54px;
+        padding:12px 0 0 15px;
+    }
+    .navbar-nav{
+        float: left;
+        margin: 0;
+        li{
+            float: left;
+        }
+    }
+    .navbar-header{
+        float: left;
+    }
+    .img-rounded{
+        width:42px;
+        height:42px;
+        border-radius: 50%;
+        margin-left: 11px;
+    }
+    & li a{
+        height:54px;
+        line-height:54px;
+        padding:0 15px;
+        color:#999;
+    }
+    .nav{
+        position:relative;
+        .navslip{
+            background-color:#85c030;
+            position:absolute;
+            height:3px;
+            width:0px;
+            left:0;
+        }
+        & > li > a:not(:last-child){
+            border-top:3px solid transparent;
+        }
+        & > li > a:hover{
+            background:#262626;
+        }
+        & > li > a:focus,
+        & > li.active a{
+            background:#262626;
+            color:#d0d0d0;
+        }
+    }
+}
+
+@mixin king-horizontal-nav10-maker($backgroundColor,$hoverColor,$borderColor,$color){
+    &.king-horizontal-nav10{
+        background-color:$backgroundColor;
+        .nav{
+            position:relative;
+            .navslip{
+                background-color:#85c030;
+            }
+            & > li > a:hover{
+                background:$hoverColor;
+            }
+            & > li > a:focus,
+            & > li.active a{
+                background:$hoverColor;
+                color:$color;
+            }
+        }
+        & li a {
+            color: $color;
+        }
+    }
+}
+
+.king-horizontal-info {
+    @include king-horizontal-nav10-maker($infoBgColor, $infoHoverColor, $infoBorderColor, $infoFontColor);
+}
+.king-horizontal-default {
+    @include king-horizontal-nav10-maker($defaultBgColor, $defaultHoverColor, $defaultBorderColor, $defaultFontColor);
+}
+.king-horizontal-primary {
+    @include king-horizontal-nav10-maker($primaryBgColor, $primaryHoverColor, $primaryBorderColor, $primaryFontColor);
+}
+.king-horizontal-warning {
+    @include king-horizontal-nav10-maker($warningBgColor, $warningHoverColor, $warningBorderColor, $warningFontColor);
+}
+.king-horizontal-success {
+    @include king-horizontal-nav10-maker($successBgColor, $successHoverColor, $successBorderColor, $successFontColor);
+}
+.king-horizontal-danger {
+    @include king-horizontal-nav10-maker($dangerBgColor, $dangerHoverColor, $dangerBorderColor, $dangerFontColor);
+}
+/*===================================================*\
+ * 自定义横向导航栏样式 horizontal_nav11
+\*===================================================*/
+.king-horizontal-nav11{
+    background-color:#313b4c;
+    height:70px;
+    width:100%;
+    min-width: 800px;
+    .navbar-brand{
+        width:220px;
+        height:70px;
+        padding:20px 0 0 15px;
+    }
+    .navbar-nav{
+        float: left;
+        margin: 0;
+    }
+    .navbar-header{
+        float: left;
+    }
+    .SumoSelect > .CaptionCont {
+        width: 160px;
+        height: 36px;
+        background: #313b4c;
+        color: #79889d;
+        border: 1px solid #464f5e;
+        font-size: 14px;
+    }
+    .SumoSelect > .CaptionCont > label > i{
+        background: url(../images/select_icon1.png) no-repeat;
+        top:10px
+    }
+    .img-rounded{
+        width:42px;
+        height:42px;
+        border-radius: 50%;
+        margin-left: 11px;
+    }
+    & li a{
+        height:70px;
+        line-height:70px;
+        padding:0 15px;
+        color: #79889d;
+    }
+    & li select{
+        width: 160px;
+        height: 36px;
+        background: #313b4c;
+        color: #79889d;
+        border: 1px solid #464f5e;
+        padding: 7px 18px;
+        font-size: 14px;
+    }
+    .nav{
+        position:relative;
+        .navslip{
+            background-color:#85c030;
+            position:absolute;
+            height:3px;
+            width:0px;
+            left:0;
+        }
+        & > li > a:not(:last-child){
+            border-top:3px solid transparent;
+        }
+        & > li > a:hover{
+            background:#283242;
+        }
+        & > li > a:focus,
+        & > li.active a{
+            background:#283242;
+            color:#d0d0d0;
+        }
+    }
+}
+@mixin king-horizontal-nav11-maker($backgroundColor,$hoverColor,$borderColor,$color){
+    &.king-horizontal-nav11{
+        background-color:$backgroundColor;
+        .nav{
+            position:relative;
+            .navslip{
+                background-color:#85c030;
+            }
+            & > li > a:hover{
+                background:$hoverColor;
+            }
+            & > li > a:focus,
+            & > li.active a{
+                background:$hoverColor;
+                color:$color;
+            }
+        }
+        & li a {
+            color: $color;
+        }
+    }
+}
+
+@mixin king-horizontal-nav11-select($backgroundColor,$hoverColor,$borderColor,$color){
+    &.king-horizontal-nav11{
+        background-color:$backgroundColor;
+            .SumoSelect > .CaptionCont {
+            width: 160px;
+            height: 36px;
+            background: $backgroundColor;
+            color: #79889d;
+            border: 1px solid $backgroundColor;
+            font-size: 14px;
+        }
+    }
+}
+.king-horizontal-info {
+    @include king-horizontal-nav11-select($infoBgColor, $infoHoverColor, $infoBorderColor, $infoFontColor);
+}
+.king-horizontal-default {
+    @include king-horizontal-nav11-select($defaultBgColor, $defaultHoverColor, $defaultBorderColor, $defaultFontColor);
+}
+.king-horizontal-primary {
+    @include king-horizontal-nav11-select($primaryBgColor, $primaryHoverColor, $primaryBorderColor, $primaryFontColor);
+}
+.king-horizontal-warning {
+    @include king-horizontal-nav11-select($warningBgColor, $warningHoverColor, $warningBorderColor, $warningFontColor);
+}
+.king-horizontal-success {
+    @include king-horizontal-nav11-select($successBgColor, $successHoverColor, $successBorderColor, $successFontColor);
+}
+.king-horizontal-danger {
+    @include king-horizontal-nav11-select($dangerBgColor, $dangerHoverColor, $dangerBorderColor, $dangerFontColor);
+}
+
+.king-horizontal-info {
+    @include king-horizontal-nav11-maker($infoBgColor, $infoHoverColor, $infoBorderColor, $infoFontColor);
+}
+.king-horizontal-default {
+    @include king-horizontal-nav11-maker($defaultBgColor, $defaultHoverColor, $defaultBorderColor, $defaultFontColor);
+}
+.king-horizontal-primary {
+    @include king-horizontal-nav11-maker($primaryBgColor, $primaryHoverColor, $primaryBorderColor, $primaryFontColor);
+}
+.king-horizontal-warning {
+    @include king-horizontal-nav11-maker($warningBgColor, $warningHoverColor, $warningBorderColor, $warningFontColor);
+}
+.king-horizontal-success {
+    @include king-horizontal-nav11-maker($successBgColor, $successHoverColor, $successBorderColor, $successFontColor);
+}
+.king-horizontal-danger {
+    @include king-horizontal-nav11-maker($dangerBgColor, $dangerHoverColor, $dangerBorderColor, $dangerFontColor);
+}

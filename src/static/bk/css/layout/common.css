@@ -1,0 +1,357 @@
+.king-layout-container {
+  background: #eee;
+  min-height: 100%; }
+  .king-layout-container.height100 {
+    height: 100%; }
+  .king-layout-container .hide {
+    display: none !important; }
+  .king-layout-container a {
+    text-decoration: none; }
+  .king-layout-container .king-horizontal-nav1 {
+    padding: 0 32px; }
+  .king-layout-container .item-pull-right {
+    padding-right: 18px; }
+    .king-layout-container .item-pull-right li .logout span {
+      color: #646464;
+      margin: 0 15px;
+      border-left: 1px solid #999;
+      padding-left: 15px;
+      cursor: pointer; }
+    .king-layout-container .item-pull-right li a {
+      color: #646464;
+      padding: 0; }
+      .king-layout-container .item-pull-right li a:hover {
+        background: none; }
+    .king-layout-container .item-pull-right li .img-rounded {
+      border-radius: 50%; }
+
+.king-layout-header {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 0 50px;
+  height: 64px;
+  line-height: 64px; }
+  .king-layout-header .logo {
+    width: 120px;
+    height: 31px;
+    background: #333;
+    border-radius: 6px;
+    margin: 16px 24px 16px 0;
+    float: left; }
+  .king-layout-header .king-menu-list {
+    border: 0;
+    box-shadow: none;
+    z-index: 0;
+    color: rgba(255, 255, 255, 0.67);
+    background: #404040; }
+    .king-layout-header .king-menu-list li {
+      float: left;
+      margin: 0;
+      margin-top: -1px;
+      padding: 0 20px;
+      position: relative;
+      display: block;
+      white-space: nowrap; }
+      .king-layout-header .king-menu-list li.king-menu-on a {
+        color: white; }
+        .king-layout-header .king-menu-list li.king-menu-on a:hover {
+          opacity: 1; }
+    .king-layout-header .king-menu-list a {
+      color: rgba(255, 255, 255, 0.67);
+      -webkit-transition: all .3s ease;
+      transition: all .3s ease; }
+      .king-layout-header .king-menu-list a:hover {
+        color: white; }
+
+.king-flexible-setting {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  overflow: auto;
+  padding: 0 !important;
+  height: 100%; }
+
+.mg50 {
+  margin: 0 50px !important; }
+
+.king-flex-y {
+  display: flex;
+  flex-direction: column; }
+
+.king-flex-auto {
+  flex: auto; }
+
+.king-layout-main {
+  margin: auto;
+  padding: 0 50px; }
+  .king-layout-main .king-breadcrumb {
+    color: rgba(0, 0, 0, 0.43);
+    font-size: 12px;
+    padding: 12px 0px; }
+    .king-layout-main .king-breadcrumb .king-breadcrumb-separator {
+      margin: 0 8px;
+      color: #d9d9d9; }
+    .king-layout-main .king-breadcrumb span:last-child {
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.65); }
+  .king-layout-main .king-layout-content {
+    padding: 24px;
+    background: #FFF; }
+    .king-layout-main .king-layout-content .king-content-scroll {
+      padding: 24px;
+      background: #FFF; }
+    .king-layout-main .king-layout-content.king-layout-has-slider {
+      padding: 24px 0px !important; }
+      .king-layout-main .king-layout-content.king-layout-has-slider .king-layout-slider {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 200px;
+        -ms-flex: 0 0 200px;
+        flex: 0 0 200px;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        position: relative;
+        border-right: 1px solid #e9e9e9; }
+      .king-layout-main .king-layout-content.king-layout-has-slider .king-layout-content {
+        -webkit-box-flex: 1;
+        -webkit-flex: auto;
+        -ms-flex: auto;
+        flex: auto;
+        padding: 0px 24px;
+        min-height: 280px; }
+      .king-layout-main .king-layout-content.king-layout-has-slider .king-menu-submenu-title {
+        margin: 0;
+        padding: 0px 16px 0 28px;
+        position: relative;
+        display: block;
+        white-space: nowrap;
+        font-size: 12px;
+        line-height: 42px;
+        height: 42px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease; }
+        .king-layout-main .king-layout-content.king-layout-has-slider .king-menu-submenu-title:hover {
+          color: #4A9BFF; }
+      .king-layout-main .king-layout-content.king-layout-has-slider .king-menu-inline {
+        outline: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style: none;
+        color: rgba(0, 0, 0, 0.65);
+        background: #fff;
+        line-height: 46px; }
+        .king-layout-main .king-layout-content.king-layout-has-slider .king-menu-inline.king-menu-item-list {
+          border-right: 0; }
+      .king-layout-main .king-layout-content.king-layout-has-slider .submenu-icon {
+        margin-right: 8px; }
+      .king-layout-main .king-layout-content.king-layout-has-slider .up-down-icon {
+        margin-top: 15px;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+        -webkit-transition: transform .3s ease;
+        transition: transform .3s ease; }
+      .king-layout-main .king-layout-content.king-layout-has-slider .king-menu-item-list {
+        display: none; }
+      .king-layout-main .king-layout-content.king-layout-has-slider .default-list {
+        display: block; }
+      .king-layout-main .king-layout-content.king-layout-has-slider .king-menu-item {
+        padding-left: 48px;
+        font-size: 12px;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        cursor: pointer; }
+        .king-layout-main .king-layout-content.king-layout-has-slider .king-menu-item.king-menu-item-selected {
+          color: #4A9BFF;
+          border-right: 3px solid #4A9BFF;
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+          background-color: #ecf6fd; }
+        .king-layout-main .king-layout-content.king-layout-has-slider .king-menu-item:hover {
+          color: #4A9BFF; }
+    .king-layout-main .king-layout-content .show-items .up-down-icon {
+      -webkit-transform: rotate(0);
+      -moz-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+      -webkit-transition: transform .3s ease;
+      transition: transform .3s ease; }
+    .king-layout-main .king-layout-content .king-slider-content {
+      width: 100%;
+      padding: 0px 24px;
+      min-height: 280px;
+      color: rgba(0, 0, 0, 0.65);
+      font-size: 14px; }
+  .king-layout-main .king-flexible-nav {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 200px;
+    -ms-flex: 0 0 200px;
+    flex: 0 0 200px;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    position: relative;
+    background: rgba(0, 0, 0, 0.75); }
+    .king-layout-main .king-flexible-nav.king-layout-sider-collapsed {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 64px;
+      -ms-flex: 0 0 64px;
+      flex: 0 0 64px; }
+      .king-layout-main .king-flexible-nav.king-layout-sider-collapsed .logo {
+        margin: 16px;
+        background: url(http://t.open.oa.com/s/magicbox-test/static/v3/bk/images/logo.png) no-repeat left center;
+        background-size: 78px 24px;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease; }
+        .king-layout-main .king-flexible-nav.king-layout-sider-collapsed .logo img {
+          height: 24px;
+          -webkit-transition: all .3s ease;
+          transition: all .3s ease; }
+      .king-layout-main .king-flexible-nav.king-layout-sider-collapsed li span {
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        font-size: 16px; }
+    .king-layout-main .king-flexible-nav .logo {
+      width: auto;
+      height: 32px;
+      margin: 16px 24px;
+      background: url(http://t.open.oa.com/s/magicbox-test/static/v3/bk/images/logo.png) no-repeat; }
+    .king-layout-main .king-flexible-nav .flexible-list {
+      margin: 0;
+      padding: 0; }
+      .king-layout-main .king-flexible-nav .flexible-list li {
+        padding: 0px 16px 0 24px;
+        font-size: 12px;
+        line-height: 42px;
+        height: 42px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #fff;
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.67); }
+        .king-layout-main .king-flexible-nav .flexible-list li:hover {
+          color: white; }
+          .king-layout-main .king-flexible-nav .flexible-list li:hover a {
+            -webkit-transition: all .3s ease;
+            transition: all .3s ease;
+            color: white; }
+        .king-layout-main .king-flexible-nav .flexible-list li.king-selected-nav {
+          background-color: #4A9BFF; }
+          .king-layout-main .king-flexible-nav .flexible-list li.king-selected-nav span {
+            color: white; }
+          .king-layout-main .king-flexible-nav .flexible-list li.king-selected-nav a {
+            color: white !important;
+            opacity: 1; }
+      .king-layout-main .king-flexible-nav .flexible-list span {
+        margin-right: 8px;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease; }
+      .king-layout-main .king-flexible-nav .flexible-list a {
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+        color: rgba(255, 255, 255, 0.67); }
+    .king-layout-main .king-flexible-nav .king-layout-sider-trigger {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      bottom: 0;
+      cursor: pointer;
+      height: 48px;
+      line-height: 48px;
+      background: rgba(75, 75, 75, 0.8);
+      color: #fff; }
+      .king-layout-main .king-flexible-nav .king-layout-sider-trigger .open-icon {
+        display: inline-block;
+        width: 22px;
+        height: 14px;
+        background: url(./images/nav-min.png); }
+  .king-layout-main .king-flexible-content {
+    -webkit-box-flex: 1;
+    -webkit-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    height: 100%; }
+    .king-layout-main .king-flexible-content .right-layout-main {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-flex: 1;
+      flex: auto; }
+      .king-layout-main .king-flexible-content .right-layout-main .king-breadcrumb {
+        margin: 0 16px;
+        margin: 0 16px;
+        -webkit-box-flex: 0;
+        flex: 0 0 40px; }
+      .king-layout-main .king-flexible-content .right-layout-main .king-layout-footer {
+        padding: 8px 50px 24px;
+        -webkit-box-flex: 1;
+        flex: 0 0 50px; }
+    .king-layout-main .king-flexible-content .right-layout-content {
+      -webkit-box-flex: 1;
+      flex: auto;
+      overflow: auto;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column; }
+      .king-layout-main .king-flexible-content .right-layout-content .right-content-main {
+        flex: auto;
+        margin: 0 16px;
+        background: #FFF;
+        padding: 24px; }
+      .king-layout-main .king-flexible-content .right-layout-content .right-content-scroll {
+        flex: auto;
+        margin: 0 16px;
+        background: #FFF;
+        padding: 24px; }
+    .king-layout-main .king-flexible-content .right-layout-header {
+      background: white;
+      padding: 0px;
+      height: 64px;
+      line-height: 64px;
+      -webkit-box-flex: 1;
+      flex: 0 0 64px; }
+      .king-layout-main .king-flexible-content .right-layout-header .king-layout-sider-trigger {
+        display: inline-block;
+        padding: 0 16px; }
+        .king-layout-main .king-flexible-content .right-layout-header .king-layout-sider-trigger span {
+          cursor: pointer; }
+        .king-layout-main .king-flexible-content .right-layout-header .king-layout-sider-trigger .open-icon {
+          display: inline-block;
+          width: 22px;
+          height: 14px;
+          background: url(../images/nav-min.png); }
+        .king-layout-main .king-flexible-content .right-layout-header .king-layout-sider-trigger .close-icon {
+          display: inline-block;
+          width: 22px;
+          height: 14px;
+          background: url(../images/nav-min.png);
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.king-layout-footer {
+  text-align: center;
+  padding: 24px 50px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 12px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto; }
+
+@media (min-width: 768px) {
+  .layout-container {
+    width: 100%;
+    padding: 0; } }

@@ -1,0 +1,90 @@
+@charset "utf-8";
+@import "../base/conf";
+/*===================================================*\ 
+ * 异常页面的样式
+\*===================================================*/
+.king-errorpage-middle{
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-top:-185px;
+    margin-left:-268px;
+    .king-exception-box {
+        img {
+            vertical-align:middle;
+            display:inherit;
+            margin: 0 auto;
+        }
+        h1 {
+            font-weight:normal;
+            line-height:1.1;
+            font-size:28px;
+            margin:26px 0;
+            color:#2b2c2d;
+        }
+        p {
+            font-size:16px;
+            color:#505152
+        }
+        .king-403-btn1, .king-403-btn2 {
+            font-size:14px;
+        }
+        .king-403-btn2 {
+            background:#5CB85C;
+        }
+        .king-login-back {
+            font-size:12px;
+            span{
+                color:#5d9cec;
+            }
+            a{
+                padding:3px 10px;
+                font-size:14px;
+            }
+        } 
+    }
+}
+.king-500-page, .king-401-page, .king-login-page, .king-403-page {
+    width: 536px;
+    text-align: center;
+    margin: auto;
+    font-family: $globalFontFamily;
+} 
+.king-login-fail {
+    width: 536px; 
+    height: 300px;
+    text-align: center;
+    margin: auto;
+    .login-tip {
+        margin-top: 20px;
+        font-size: 14px;
+        a {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+    }
+}
+
+.king-500-page1 {
+    font-family:$globalFontFamily;
+    color: #616161;
+    .error-number {
+        font-size: 100px;
+    }
+    .error-title {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 15px 0;
+    }
+    .error-tip {
+        font-size: 12px;
+        a {
+            color: #616161;
+            display: inline;
+            background: none;
+            padding: 0;
+            margin: 0;
+            font-size: 12px;
+        }
+    } 
+} 

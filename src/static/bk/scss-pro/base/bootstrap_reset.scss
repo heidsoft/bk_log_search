@@ -1,0 +1,659 @@
+@charset "utf-8";
+@import "../base/conf";
+/*===================================================*\ 
+ * bk pc端样式
+\*===================================================*/
+html,body {
+	height:100%;
+}
+body {
+	font-family:STHeiti,'Microsoft Yahei';
+}
+ul {
+	list-style:none;
+}
+h1,h2,h3,h4,h5,h6 {
+	outline:none;
+}
+button,a {
+	outline:none;
+}
+a:hover,a:active,a:focus {
+	text-decoration:none;
+	outline:none;
+}
+/*===================================================*\ 
+ * bootsrtap样式重置
+\*===================================================*/
+.form-control {
+	border-radius:0;
+	font-size:14px;
+	height:36px;
+	padding:8px;
+	border-radius:2px;
+}
+textarea.form-control{
+	height:74px;
+	resize:none;
+}
+label {
+	font-weight:normal;
+}
+.btn {
+	border-radius:0;
+}
+.btn-info {
+	background-color:#4797E7;
+	border-color:#0E7AE2;
+}
+.input-group-addon {
+	border-radius:0;
+}
+.form-control {
+	box-shadow:none;
+}
+.form-control:focus {
+	box-shadow:none;
+}
+.progress {
+	margin-bottom:0;
+	box-shadow:none;
+	border-radius:0;
+}
+
+.table-bordered > thead > tr > th,.table-bordered > thead > tr > td {
+	border-bottom-width:1px;
+}
+.table-header-bg th {
+	background:#f6f8f8;
+}
+.table-out-bordered th {
+	border-top:2px solid #2180F5 !important;
+}
+.validate-form .error {
+	color:#a94442;
+}
+
+.table tfoot td {
+	background:#fafafa;
+}
+.table tfoot .pagination {
+	margin:0;
+}
+.table tfoot .pagination-info {
+	margin:7px 15px 0 0;
+}
+/* 翻页条样式 */ 
+.pagination > .active > a,.pagination > .active > span,.pagination > .active > a:hover,.pagination > .active > span:hover,.pagination > .active > a:focus,.pagination > .active > span:focus {
+	background-color:#fafafa;
+	border-color:#cccccc;
+}
+.pagination > li > a,.pagination > li > span{
+	background-color: #fafafa; 
+	border:1px solid #ccc;
+	border-radius: 0;
+	color: #cccccc;
+	padding: 7px 13px;
+	font-size: 14px;
+	&:focus{
+		background-color: #fafafa; 
+		border-radius: 0;
+		color: #cccccc;
+	}
+	&:hover{
+		color: #20a0ff;
+		background: #fafafa;
+		border-color: #ccc;
+	}
+} 
+.pagination > li:first-child > a,.pagination > li:first-child > span {
+	border-top-left-radius:2px;
+	border-bottom-left-radius:2px;
+}
+.pagination > li:last-child > a,.pagination > li:last-child > span {
+	border-top-right-radius:2px;
+	border-bottom-right-radius:2px;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+	z-index: 4;
+	border-color: #ccc;
+	color: #20a0ff;
+	background: #f3f3f3;
+	opacity: 1;
+}
+/* 翻页样式1 */ 
+.pagination1 > .active > a,.pagination1 > .active > span,.pagination1 > .active > a:hover,.pagination1 > .active > span:hover,.pagination1 > .active > a:focus,.pagination1 > .active > span:focus {
+	background-color:#fafafa;
+	border-color:#cccccc;
+}
+.pagination1 > li > a,.pagination1 > li > span{
+	background-color: #fafafa; 
+	border-radius: 0;
+	color: #888;
+	&:focus{
+		background-color: #fafafa; 
+		border-radius: 0;
+		color: #888;
+	}
+	&:hover{
+		color: #20a0ff;
+		background: #fafafa;
+	}
+}
+.pagination1>.active>a, .pagination1>.active>a:focus, .pagination1>.active>a:hover, .pagination1>.active>span, .pagination1>.active>span:focus, .pagination1>.active>span:hover{
+	z-index: 4;
+	border-color: #20a0ff;
+	color: #fff;
+	background: #20a0ff;
+}
+/* 翻页样式2 */ 
+.pagination2 > .active > a,.pagination2 > .active > span,.pagination2 > .active > a:hover,.pagination2 > .active > span:hover,.pagination2 > .active > a:focus,.pagination2 > .active > span:focus {
+	background-color:#fafafa;
+	border-color:#cccccc;
+}
+.pagination2 > li > a,.pagination2 > li > span{
+	background-color: #fafafa; 
+	border-radius: 0;
+	color: #888;
+	border-radius: 2px;
+	&:focus{
+		background-color: #fafafa; 
+		border-radius: 2px;
+		color: #888;
+	}
+	&:hover{
+		color: #20a0ff;
+		background: #fafafa;
+	}
+}
+.pagination2 > li > a,.pagination2 > li > span{
+	margin-right: 10px;
+}
+.pagination2 > li:last-child > a,.pagination2 > li:last-child > span{
+	margin-right: 10px;
+}
+.pagination2>.active>a, .pagination2>.active>a:focus, .pagination2>.active>a:hover, .pagination2>.active>span, .pagination2>.active>span:focus, .pagination2>.active>span:hover{
+	z-index: 4;
+	border-color: #20a0ff;
+	color: #fff;
+	background: #20a0ff;
+}
+/* 翻页条尺寸 */ 
+.pagination-sm > li > a,.pagination-sm > li > span {
+	padding:4px 10px;
+	line-height: 20px;
+}
+.pagination-lg > li > a,.pagination-lg > li > span {
+	padding:11px 16px;
+}
+/* 禁用样式 */
+.pagination > li.disabled > a,.pagination > li.disabled > span, .pagination > li.disabled > a:hover,.pagination > li.disabled > span:hover,.pagination > li.disabled > a:focus,.pagination > li.disabled > span:focus{
+	color: #ccc;
+	background-color:#fafafa;
+	border-color:#cccccc;	
+}
+.pagination > .active.disabled > a,.pagination > .active.disabled > span, .pagination > .active.disabled > a:hover,.pagination > .active.disabled > span:hover,.pagination > .active.disabled > a:focus,.pagination > .active.disabled > span:focus{
+	color: #20a0ff;
+	background-color:#f3f3f3;
+	border-color:#cccccc;	
+}
+.pagination1 > li.disabled > a,.pagination1 > li.disabled > span, .pagination1 > li.disabled > a:hover,.pagination1 > li.disabled > span:hover,.pagination1 > li.disabled > a:focus,.pagination1 > li.disabled > span:focus{
+	color: #888;
+	background-color:#fafafa;
+}
+.pagination1 > .active.disabled > a,.pagination1 > .active.disabled > span, .pagination1 > .active.disabled > a:hover,.pagination1 > .active.disabled > span:hover,.pagination1 > .active.disabled > a:focus,.pagination1 > .active.disabled > span:focus{
+	color: #fff;
+	background-color:#20a0ff;
+	border-color: #20a0ff;
+}
+.pagination2 > li.disabled > a,.pagination2 > li.disabled > span, .pagination2 > li.disabled > a:hover,.pagination2 > li.disabled > span:hover,.pagination2 > li.disabled > a:focus,.pagination2 > li.disabled > span:focus{
+	color: #888;
+	background-color:#fafafa;
+	border-color:#cccccc;	
+}
+.pagination2 > .active.disabled > a,.pagination2 > .active.disabled > span, .pagination2 > .active.disabled > a:hover,.pagination2 > .active.disabled > span:hover,.pagination2 > .active.disabled > a:focus,.pagination2 > .active.disabled > span:focus{
+	color: #fff;
+	background-color:#20a0ff;
+	border-color: #20a0ff;
+}
+
+.nav-tabs > li > a {
+	border-radius:0;
+}
+.modal-content {
+	-webkit-box-shadow:none;
+	box-shadow:none;
+	-webkit-border-radius:0;
+	border-radius:0;
+}
+.alert {
+	border-radius:0;
+}
+.dropdown-menu {
+	border-radius:0;
+}
+.breadcrumb,.thumbnail {
+	border-radius:0;
+}
+.table {
+	font-size: 14px;
+  	color:#666;
+  	border-radius:2px;
+  	& tbody{
+	  color:#888;
+	  font-size: 12px;
+	  border-bottom:1px solid #e6e6e6;
+	}
+	&>thead>tr>th{
+		background:#fafafa;
+		border-bottom:1px solid #e6e6e6;     
+	}
+	&>thead>tr{
+		.king-sorting{
+		  background: #fafafa url(../images/down.png)no-repeat 94% center;
+		}
+		.sorting-up{
+		  background-image: url(../images/up.png);
+		}
+	}
+	&>thead:first-child>tr:first-child>th{
+		border-top:1px solid #e6e6e6;
+	}
+	& td:first-child,& th:first-child{
+		text-align:center;
+	}
+	&>tbody>tr>td{
+		padding: 11px;
+		a.alink{
+			margin-right:15px;
+		}    
+	}
+	&>thead>tr>th{
+		padding:10px;
+	}
+	input[type="checkbox"]{
+		display:none;
+	}
+	input[type="checkbox"] + label {
+		background-color: #FFF;
+		border: 1px solid #c8c8c8;
+		width: 13px;
+		height: 13px;
+		display: inline-block;
+		vertical-align:-2px;
+		position: relative;
+	}
+	input[type="checkbox"]:checked + label:after {
+		content: "";
+		width: 14px;
+		height: 14px;
+		border-color: 1px solid $primaryBorderColor;
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		color: #758794;
+		text-align: center;
+		font-size: 1.4em;
+		padding: 1px 0 0 0;
+		vertical-align: text-top;
+		background: $primaryBgColor url(../images/table-checked.png)no-repeat center center
+	}
+}
+.king-table-category{
+	.table{
+		margin:0;
+		& tbody{
+			border-bottom:none;
+		}
+		& th{
+			text-align:left;
+			color:#57a3f1;
+			span{
+				display:inline-block;
+				vertical-align:-3px;
+				width:22px;
+				height:16px;
+				background: url(../images/table_icon2.png) no-repeat center center;
+			}
+			span.close{
+				background-image:url(../images/table_icon1.png);
+			}
+		}
+	}
+	.table > thead:first-child > tr:first-child > th{
+		border:none;
+		cursor:pointer;
+	}
+	&>tbody>tr>td{
+		padding:0 !important;
+		text-align: left !important;
+	}
+}
+.king-table-warning{
+	&>tbody>tr>td{
+		padding:60px 0;
+	}
+	p{
+		color: #999;
+		font-size:20px;
+		margin: 10px 0 20px 0;
+	}
+}
+.king-table-empty{
+	.table-loading{
+	    position:relative;
+	    width:89px;
+	    height:28px;
+	    margin:auto;
+	    .point{
+		    position:absolute;
+		    top:0;
+		    width:28px;
+		    height:28px;
+		    animation-name:bounce_fountainG;
+		        -o-animation-name:bounce_fountainG;
+		        -ms-animation-name:bounce_fountainG;
+		        -webkit-animation-name:bounce_fountainG;
+		        -moz-animation-name:bounce_fountainG;
+		     animation-duration:.8s;
+		        -o-animation-duration:.8s;
+		        -ms-animation-duration:.8s;
+		        -webkit-animation-duration:.8s;
+		        -moz-animation-duration:.8s;
+		    animation-iteration-count:infinite;
+		        -o-animation-iteration-count:infinite;
+		        -ms-animation-iteration-count:infinite;
+		        -webkit-animation-iteration-count:infinite;
+		        -moz-animation-iteration-count:infinite;
+		    animation-direction:normal;
+		        -o-animation-direction:normal;
+		        -ms-animation-direction:normal;
+		        -webkit-animation-direction:normal;
+		        -moz-animation-direction:normal;
+		    transform:scale(.3);
+		        -o-transform:scale(.3);
+		        -ms-transform:scale(.3);
+		        -webkit-transform:scale(.3);
+		        -moz-transform:scale(.3);
+		    border-radius:19px;
+		        -o-border-radius:19px;
+		        -ms-border-radius:19px;
+		        -webkit-border-radius:19px;
+		        -moz-border-radius:19px;
+		}
+
+		.point_1{
+		    background-color: #fd6154;
+		    left:0;
+		    animation-delay:0.1s;
+		        -o-animation-delay:0.1s;
+		        -ms-animation-delay:0.1s;
+		        -webkit-animation-delay:0.1s;
+		        -moz-animation-delay:0.1s;
+		}
+
+		.point_2{
+		    background-color: #ffb726;
+		    left:20px;
+		    animation-delay:0.25s;
+		        -o-animation-delay:0.25s;
+		        -ms-animation-delay:0.25s;
+		        -webkit-animation-delay:0.25s;
+		        -moz-animation-delay:0.25s;
+		}
+
+		.point_3{
+		    background-color: #4cd084;
+		    left:40px;
+		    animation-delay:0.4s;
+		        -o-animation-delay:0.4s;
+		        -ms-animation-delay:0.4s;
+		        -webkit-animation-delay:0.4s;
+		        -moz-animation-delay:0.4s;
+		}
+
+		.point_4{
+		    background-color: #57a3f1;
+		    left:60px;
+		    animation-delay:0.55s;
+		        -o-animation-delay:0.55s;
+		        -ms-animation-delay:0.55s;
+		        -webkit-animation-delay:0.55s;
+		        -moz-animation-delay:0.55s;
+		}
+	}
+	&>tbody>tr>td{
+		padding:120px 0;
+		color: #999;
+		font-size:20px;
+	}
+	@keyframes bounce_fountainG{
+	    0%{
+	    transform:scale(.5);
+	    }
+
+	    100%{
+	    transform:scale(.3);
+	    }
+	}
+	@-webkit-keyframes bounce_fountainG{
+	    0%{
+	    -webkit-transform:scale(.6);
+	    }
+
+	    100%{
+	    -webkit-transform:scale(.3);
+	    }
+	}
+	@-o-keyframes bounce_fountainG{
+	    0%{
+	    -o-transform:scale(.6);
+	    }
+
+	    100%{
+	    -o-transform:scale(.3);
+	    }
+	}
+
+	@-ms-keyframes bounce_fountainG{
+	    0%{
+	    -ms-transform:scale(.6);
+	    }
+
+	    100%{
+	    -ms-transform:scale(.3);
+	    }
+	}
+
+	@-moz-keyframes bounce_fountainG{
+	    0%{
+	    -moz-transform:scale(.6);
+	    }
+
+	    100%{
+	    -moz-transform:scale(.3);
+	    }
+	}
+}
+
+.table-striped>tbody>tr:nth-of-type(even){
+  background:#fafafa;
+}
+.table-striped>tbody>tr:nth-of-type(odd){
+  background: none;
+}
+.table-header-bordered>thead>tr>td, .table-header-bordered>thead>tr>th,.table-header-bordered>tbody>tr{
+  border: 1px solid #e6e6e6;
+}
+.table>tbody>tr>td,.table>tbody>tr>th,.table>tfoot>tr>td,.table>tfoot>tr>th,.table>thead>tr>td,.table>thead>tr>th {
+	vertical-align:middle;
+	border-color: #e6e6e6;
+}
+.dataTables_paginate .pagination > li > a,.dataTables_paginate .pagination > li > span {
+	line-height:16px;
+	padding:5px 10px;
+}
+.input-group-addon {
+	padding:5px 10px;
+}
+.form-control {
+	display:inline-block;
+}
+label {
+	max-width:none;
+}
+.badge {
+	font-weight:normal;
+	background:#4A9BFF;
+}
+.form-group .help-block {
+	margin-bottom:0;
+}
+.panel {
+	border-radius:0;
+}
+.tab-content {
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+}
+.label-info{
+	color: $primaryBgColor;
+	background: none;
+	font-weight:bold;
+}
+.label-danger{
+	color: $dangerBgColor;
+	background: none;
+	font-weight:bold;
+}
+.label-success{
+	color: $successBgColor;
+	background: none;
+	font-weight:bold;
+}
+.form-inline .input-group>.form-control{
+	width: 250px;
+	border-radius: 2px;
+	margin-right: 6px;
+}
+.panel-content{
+	border-radius:2px;
+	.table{
+		margin-bottom: 0px;
+		tbody{
+			border-bottom:none;
+		}	
+	}
+}
+
+/*===================================================*\ 
+ * bootsrtap样式重置
+\*===================================================*/
+.k-grid,.k-scheduler,.k-menu,.k-editor {
+	border-radius:0;
+}
+.k-widget,.k-button {
+	box-shadow:none;
+}
+/*===================================================*\ 
+ * 自定义fieldset样式
+\*===================================================*/
+.fieldset {
+	border:1px solid #ddd;
+	padding:30px 15px;
+	position:relative;
+}
+.legend {
+	margin-top:-1.2em;
+	font-size:14px;
+	position:absolute;
+	top:.5em;
+	background:white;
+	padding:0 10px;
+	margin-left:-10px;
+}
+/*===================================================*\ 
+ * jPage 插件样式
+\*===================================================*/
+.king-jP {
+	margin:15px 0;
+}
+.king-jP a {
+	font-size:12px;
+	cursor:pointer;
+	margin-left:-1px;
+	border:1px solid #ddd;
+	line-height:16px;
+	padding:5px 10px;
+}
+.king-jP a:hover {
+	background-color:#f0f0f0;
+}
+.king-jP a.jp-current,.king-jP a.jp-current:hover {
+	background:#4A9BFF;
+	color:#fff;
+	border-color:#4A9BFF;
+}
+.king-jP a.jp-disabled,.king-jP a.jp-disabled:hover {
+	color:#bbb;
+}
+.king-jP a.jp-current,.king-jP a.jp-current:hover,.king-jP a.jp-disabled,.king-jP a.jp-disabled:hover {
+	cursor:default;
+}
+.king-jP span {
+	margin:0 5px;
+}
+/*===================================================*\ 
+ * jqueryUI 样式覆盖
+\*===================================================*/
+.ui-corner-all,.ui-corner-top,.ui-corner-right,.ui-corner-tr {
+	border-radius:0 !important;
+}
+.ui-corner-all,.ui-corner-bottom,.ui-corner-left,.ui-corner-bl {
+	border-radius:0 !important;
+}
+.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default {
+	background:#F8F8F8 !important;
+}
+.ui-widget-content {
+	border-color:#ddd !important;
+}
+.ui-state-active,.ui-widget-content .ui-state-active,.ui-widget-header .ui-state-active {
+	border-color:#ddd !important;
+}
+.ui-accordion .ui-accordion-content {
+	padding:15px !important;
+}
+.king-no-margin {
+	margin:0 !important;
+}
+/*===================================================*\ 
+ * 重写kendoUI的树形表样式
+\*===================================================*/
+.k-treeview .k-state-selected,.k-treeview .k-state-selected:link,.k-treeview .k-state-selected:visited,.k-treeview .k-list>.k-state-selected {
+	background-color:#b8b8b8;
+	color:#000;
+}
+.k-treeview .k-in {
+	border-radius:0;
+	box-shadow:none;
+}
+
+.dataTables_empty{
+	text-align: center;
+	padding: 15px !important;
+}
+/*===================================================*\ 
+ * 表单样式覆盖
+\*===================================================*/
+.has-error .form-control {
+    border-color: #ff7979;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+.has-error .form-control:focus{
+	border-color: #ff7979;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 2px #ff7979;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 2px #ff7979;
+}
