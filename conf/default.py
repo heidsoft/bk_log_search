@@ -22,7 +22,7 @@ except:
     pass
 
 # TOCHANGE 在蓝鲸智云平台上注册的应用的编码以及生成的应用对应的Token
-APP_ID = os.environ.get('APP_ID') if os.environ.get('APP_ID') else "log-search"
+APP_ID = os.environ.get('APP_ID') if os.environ.get('APP_ID') else "cloud-log-search"
 APP_TOKEN = os.environ.get('APP_TOKEN') if os.environ.get('APP_TOKEN') else\
     "88acccdb-a49a-4385-aeb5-0191280ec6dc"
 BK_PAAS_HOST = os.environ.get('BK_PAAS_HOST')\
